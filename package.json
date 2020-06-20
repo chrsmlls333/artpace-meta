@@ -1,0 +1,33 @@
+{
+  "name": "artpace-meta",
+  "version": "0.1.0",
+  "description": "A metadata sidecar generator for the Artpace Archive Server",
+  "main": "artpace-meta-cli.js",
+  "scripts": {
+    "define": "node . define",
+    "help": "node . --help"
+  },
+  "bin": {
+    "artpace-meta": "artpace-meta-cli.js"
+  },
+  "author": "Chris Mills",
+  "license": "ISC",
+  "dependencies": {
+    "cli-spinner": "^0.2.10",
+    "exifreader": "^3.12.0",
+    "fuzzyset": "^1.0.5",
+    "json-2-csv": "^3.7.1",
+    "junk": "^3.1.0",
+    "shelljs": "^0.8.4",
+    "winston": "^3.2.1",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1"
+  }
+}

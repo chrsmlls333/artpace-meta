@@ -1,0 +1,14 @@
+{
+  "commands": {
+    "define": {
+      "noRecurse": true,
+      "exifReadSizeBytes": 1000000,
+      "includeExtISADTitle": true,
+      "fuzzyArtistMatchMinThreshold": 0.57
+    }
+  },
+  
+  "resources": {
+    "artistsAtomTemplateCSV": "./resources/AtomAuthorityRecordsCSV_2020.06.05.csv"
+  }
+}

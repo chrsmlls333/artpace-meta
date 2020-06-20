@@ -1,0 +1,14 @@
+{
+  "checkSchemaDifferences": false,
+  "delimiter": {
+    "field": ",",
+    "wrap": "\"",
+    "eol": "\n"
+  },
+  "emptyFieldValue": "",
+  "prependHeader": true,
+  "excelBOM": true,
+  "keys": null,
+  "trimHeaderFields": false,
+  "trimFieldValues": false
+}
