@@ -1,4 +1,6 @@
 {
+  "logsDirectory": "./logs/",
+
   "commands": {
     "define": {
       "noRecurse": true,

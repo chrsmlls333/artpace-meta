@@ -1,5 +1,10 @@
-const winston = require('winston');
+/* eslint-disable import/order */
 
+const path = require('path');
+const { logsDirectory } = require('./options.json');
+require('fs').mkdirSync(path.resolve(logsDirectory), { recursive: true });
+
+const winston = require('winston');
 winston.configure({
   // level: 'info',
   // format: winston.format.json(),
@@ -19,7 +24,7 @@ winston.configure({
     //
     // new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ 
-      filename: 'logs/output.log', 
+      filename: path.resolve(logsDirectory, `log-${new Date().getTime()}.log`), 
       level: 'debug',
       format: winston.format.combine( 
         winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
@@ -29,7 +34,7 @@ winston.configure({
   ],
   exceptionHandlers: [
     new winston.transports.File({ 
-      filename: 'logs/exceptions.log',
+      filename: path.resolve(logsDirectory, 'exceptions.log'),
     }),
   ],
 });

@@ -4,10 +4,17 @@
 
 */
 
+const path = require('path');
+const fs = require('fs');
 const yargs = require('yargs');
 
-// const logger = require('./configuration/logConfig');
 // const utils = require('./configuration/utils');
+
+// =================================================
+
+const { logsDirectory } = require('./configuration/options.json');
+fs.mkdirSync(path.resolve(logsDirectory), { recursive: true });
+// const logger = require('./configuration/logConfig');
 
 // =================================================
 

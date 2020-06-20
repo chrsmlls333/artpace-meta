@@ -27,12 +27,15 @@ String.prototype.breakCamelCase = breakCamelCase;
 
 // const isadEntryTemplate = require('../configuration/Example_information_objects_isad-2.6.js');
 
+const options = require('../configuration/options.json');
 const { 
   noRecurse, 
   exifReadSizeBytes,
   includeExtISADTitle, 
   fuzzyArtistMatchMinThreshold,
-} = require('../configuration/options.json').commands.define;
+} = options.commands.define;
+const { logsDirectory } = options;
+
 
 // ==================================================
 
@@ -100,7 +103,7 @@ async function define(argv) {
       
   // Debug out
   const debugFiles = files.map(f => ({ ...f, tags: Array.from(f.tags) }));
-  fs.writeFileSync(path.resolve(__dirname, '../logs/last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
+  fs.writeFileSync(path.resolve(__dirname, '..', logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
   
   // Build ISAD Items
   let isad = files
@@ -115,7 +118,7 @@ async function define(argv) {
   const csvPromise = converter.json2csvAsync(isad, json2csvOptions);
   // csvPromise.then((result) => fsp.writeFile(path.resolve(source, `apmeta-${''}.csv`), result))
   //   .catch((err) => console.error(err.message));
-  csvPromise.then((result) => fsp.writeFile(path.resolve(__dirname, '../logs/last-output-ISAD.csv'), result))
+  csvPromise.then((result) => fsp.writeFile(path.resolve(__dirname, '..', logsDirectory, './last-output-ISAD.csv'), result))
     .catch((err) => console.error(err.message));
 
   // Open
