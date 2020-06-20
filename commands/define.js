@@ -36,7 +36,6 @@ const {
 } = options.commands.define;
 const { logsDirectory } = options;
 
-
 // ==================================================
 
 module.exports = {
