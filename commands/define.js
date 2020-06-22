@@ -1,5 +1,11 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable no-use-before-define */
+/**
+ * @module commands/define
+ * @description Yargs command module to build APMETA package/notation
+ */
+
+/* eslint-disable no-nested-ternary, no-use-before-define */
+
+// ==================================================
 
 const path = require('path');
 const fs = require('fs');
@@ -28,13 +34,13 @@ String.prototype.breakCamelCase = breakCamelCase;
 // const isadEntryTemplate = require('../configuration/Example_information_objects_isad-2.6.js');
 
 const options = require('../configuration/options.json');
+const { logsDirectory } = options;
 const { 
   noRecurse, 
   exifReadSizeBytes,
   includeExtISADTitle, 
   fuzzyArtistMatchMinThreshold,
 } = options.commands.define;
-const { logsDirectory } = options;
 
 // ==================================================
 
@@ -54,6 +60,14 @@ module.exports = {
   handler: define,
 };
 
+// ==================================================
+
+/**
+ * Yargs Command Handler
+ * 
+ * @param {Object} argv         Yargs Arguments Variable
+ * @param {String} argv.source  Working Directory
+ */
 async function define(argv) {
 
   const source = path.resolve(argv.source);
@@ -126,6 +140,29 @@ async function define(argv) {
 
 // STEPS ==========================================================
 
+/**
+ * A container for the metrics detected by Artpace Metadata Creator about each filepath
+ * @typedef {Object}    FileObject
+ * @property {String}   path            File path
+ * @property {Date}     modified    
+ * @property {Boolean}  image           Check for isImage?
+ * @property {Boolean}  video           Check for isVideo?
+ * @property {Object}   sf              Results of Siegfried match
+ * @property {String}   mediainforeport Results of MediaInfo CLI 
+ * @property {Map<String,String>} tags  Unsorted extra information
+ * @property {Object[]} dates           Significant dates arranged in AtoM ISAD names
+ * @property {String[]} credits         Unformatted credit mentions
+ * @property {String[]} names           Standardized Authority Record (nameAccessPoints)
+ * @property {String[]} subjects        Standardized Subject Entries (subjectAccessPoints)
+ */
+
+/**
+ * Run Siegfried Scan on file
+ * Compares file to PRONOM signatures to find type and mime data
+ * @requires  shelljs
+ * @param     {FileObject} fileObject 
+ * @returns   {FileObject} 
+ */
 async function siegfriedScan(fileObject) {
   // Check for dependencies first
   if (!sh.which('sf')) throw new Error('Siegfried dependency is not installed!');
@@ -141,12 +178,16 @@ async function siegfriedScan(fileObject) {
 
   const match = report.matches[0];
 
-  return { 
-    ...fileObject,
-    sf: match,
-  };  
+  return { ...fileObject, sf: match };  
 }
 
+/**
+ * Run MediaInfo Scan on file
+ * A detailed metadata scan on video/audio/images
+ * @requires  shelljs
+ * @param     {FileObject} fileObject 
+ * @returns   {FileObject} 
+ */
 async function mediaInfoScan(fileObject) {
   // Check for dependencies first
   if (!sh.which('mediainfo')) throw new Error('MediaInfo dependency is not installed!');
@@ -169,6 +210,12 @@ async function mediaInfoScan(fileObject) {
   };
 }
 
+/**
+ * Pull EXIF/IPTC data from image files
+ * @requires exifreader
+ * @param    {FileObject} fileObject 
+ * @returns  {FileObject} 
+ */
 async function exifTagScan(fileObject) {
   if (!fileObject.image) return fileObject;
   return fsp.open(fileObject.path, 'r')
@@ -204,6 +251,13 @@ async function exifTagScan(fileObject) {
     });
 }
 
+/**
+ * Build AtoM ISAD date objects 
+ *   from FileObject.modified Date
+ *   from path mentions
+ * @param    {FileObject} fileObject 
+ * @returns  {FileObject} 
+ */
 function detectDates(fileObject) {
   const dates = fileObject.dates || [];
   const dateTemplate = {
@@ -244,6 +298,7 @@ function detectDates(fileObject) {
     false;
   if (filenameDateStr && filenameDateStr !== modifiedDateStr) {
     dates.push({
+      ...dateTemplate,
       eventDates: filenameDateStr,
       eventTypes: 'Creation',
     });
@@ -252,6 +307,11 @@ function detectDates(fileObject) {
   return { ...fileObject, dates };
 }
 
+/**
+ * Search for Credit mentions in EXIF tags and Path
+ * @param    {FileObject} fileObject 
+ * @returns  {FileObject} 
+ */
 function detectCreditsInPathAndTags(fileObject) {
   let credits = fileObject.credits || [];
 
@@ -277,6 +337,15 @@ function detectCreditsInPathAndTags(fileObject) {
   return { ...fileObject, credits };
 }
 
+/**
+ * Match Artist mentions and corresponding Subjects Access Points
+ * @requires fuzzyset
+ * @requires utils/loadArtists
+ * @param    {FileObject} fileObject 
+ * @param    {Object[]}   artists     List of Artist Names matched with Exhibition Cycles
+ * @param    {FuzzySet}   fuzzy       FuzzySet dictionary, prepopulated with names
+ * @returns  {FileObject} 
+ */
 function findArtistMentions(fileObject, artists, fuzzy) {
   const names = fileObject.names || [];
   const subjects = fileObject.subjects || [];
@@ -301,6 +370,11 @@ function findArtistMentions(fileObject, artists, fuzzy) {
   return { ...fileObject, names, subjects };
 }
 
+/**
+ * Fill Tags with each Path Token for later use
+ * @param    {FileObject} fileObject 
+ * @returns  {FileObject} 
+ */
 function tagPathTokens(fileObject, dirPath = path.dirname(fileObject.path)) {
   const tags = fileObject.tags || new Map();
 
@@ -319,6 +393,13 @@ function tagPathTokens(fileObject, dirPath = path.dirname(fileObject.path)) {
 
 // =============================================================
 
+/**
+ * Build AtoM ISAD(G) CSV-line Objects for each FileObject
+ * @param   {FileObject}   fileObject 
+ * @param   {Number}       i                index in alpha-sorted fileObjectArray
+ * @param   {FileObject[]} fileObjectArray 
+ * @returns {ISADEntry}   
+ */
 function isadFileFormatter(fileObject, i, fileObjectArray) {
   const f = fileObject;
   const isadEntry = {
@@ -388,6 +469,13 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
   return isadEntry;
 }
 
+/**
+ * Build AtoM ISAD(G) CSV-line Object for container
+ * Consolidate repeated data from items to container entry
+ * @param   {isadEntry[]}  isadEntries
+ * @param   {String}       dirname    Root source filepath for working directory
+ * @returns {isadEntry[]}   
+ */
 function isadContainerAddTransform(isadEntries, dirname) {
   const folderId = crypto.randomBytes(9).toString('hex');
   const legacyId = isadEntries.length + 1;
@@ -460,8 +548,10 @@ function isadContainerAddTransform(isadEntries, dirname) {
     }
   });
 
+  // Add links to parent entry
   const isadAll = isadEntries.map(e => ({ ...e, parentId: legacyId }));
 
+  // Add parent entry
   isadAll.unshift(isadParentEntry);
   return isadAll;
 }

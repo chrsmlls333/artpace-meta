@@ -1,6 +1,7 @@
-/*
-
-*/
+/**
+ * @module utils/loadArtists
+ * @description Pulls in the AtoM Authority Record CSV to create an Artist List for tagging
+ */
 
 const path = require('path');
 const fs = require('fs');
