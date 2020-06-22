@@ -2,8 +2,7 @@
 
 */
 
-const sh = require('shelljs');
-const { Spinner } = require('cli-spinner');
+/* eslint-disable global-require */
 
 const utils = {
   
@@ -20,9 +19,12 @@ const utils = {
       .trim();
   },
   
-  longCommand: (command, spinnerTemplate = 'Running... %s') => new Promise((resolve, reject) => {
+  longCommand(command, cliTemplate = 'Running... %s') {
+    const sh = require('shelljs');
+    const { Spinner } = require('cli-spinner');
+    return new Promise((resolve, reject) => {
     // eslint-disable-next-line prefer-template
-    const spinner = new Spinner(spinnerTemplate);
+      const spinner = new Spinner(cliTemplate);
     spinner.setSpinnerString(0);
     spinner.start();
     const process = sh.exec(command, { async: true, silent: true });
@@ -35,7 +37,8 @@ const utils = {
       if (code === 0) resolve(output.join(''));
       else reject(outputErr.join(''));
     });
-  }),
+    });
+  },
 
   humanFileSize: (bytes, si = false, dp = 1) => {
     let b = bytes; 
