@@ -17,7 +17,6 @@ const sh = require('shelljs');
 const ExifReader = require('exifreader');
 
 const FuzzySet = require('fuzzyset');
-const crypto = require('crypto');
 
 const converter = require('json-2-csv');
 const json2csvOptions = require('../configuration/json2csvConfig.json');
