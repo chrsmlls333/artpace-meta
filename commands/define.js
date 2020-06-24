@@ -104,8 +104,8 @@ async function define(argv) {
       
   // Debug out
   if (options.writeLocalOutputCopy) {
-  const debugFiles = files.map(f => ({ ...f, tags: Array.from(f.tags) }));
-  fs.writeFileSync(path.resolve(__dirname, '..', logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
+    const debugFiles = files.map(f => ({ ...f, tags: Array.from(f.tags) }));
+    fs.writeFileSync(path.resolve(__dirname, '..', logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
   }
   
   // Build ISAD Items
