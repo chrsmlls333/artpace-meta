@@ -15,8 +15,8 @@
   "dependencies": {
     "cli-spinner": "^0.2.10",
     "exifreader": "^3.12.0",
+    "fast-csv": "^4.3.1",
     "fuzzyset": "^1.0.5",
-    "json-2-csv": "^3.7.1",
     "junk": "^3.1.0",
     "shelljs": "^0.8.4",
     "winston": "^3.2.1",

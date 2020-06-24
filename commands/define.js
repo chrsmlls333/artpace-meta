@@ -18,8 +18,7 @@ const ExifReader = require('exifreader');
 
 const FuzzySet = require('fuzzyset');
 
-const converter = require('json-2-csv');
-const json2csvOptions = require('../configuration/json2csvConfig.json');
+const csv = require('fast-csv');
 
 const utils = require('../utils/utils');
 utils.loadArtists = require('../utils/loadArtists');
@@ -122,11 +121,7 @@ async function define(argv) {
   isad = isadContainerAddTransform(isad, source, folderID);
   
   // Write CSV!!
-  const csvPromise = converter.json2csvAsync(isad, json2csvOptions);
-  // csvPromise.then((result) => fsp.writeFile(path.resolve(source, `apmeta-${''}.csv`), result))
-  //   .catch((err) => console.error(err.message));
-  csvPromise.then((result) => fsp.writeFile(path.resolve(__dirname, '..', logsDirectory, './last-output-ISAD.csv'), result))
-    .catch((err) => console.error(err.message));
+  writeCSV(isad);
 
   // Open
   // sh.exec(`open '${source}'`);
@@ -552,4 +547,37 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
   // Add parent entry
   isadAll.unshift(isadParentEntry);
   return isadAll;
+}
+
+/**
+ * Write CSV ISAD records to local and remote apmeta.csv files
+ * @todo                                Container function with messy dependencies. 
+ *                                        Needs cleanup/compartmentalization to add to reusability
+ * @requires  fast-csv
+ * @param     {ISADEntry[]}  rows       ISAD entry rows as objects
+ * @param     {String}       dir        Root source filepath for working directory
+ * @param     {String}       folderId   ID to pass into container metadata, 
+ *                                        should be generated with generateFolderID in utils
+ */
+function writeCSV(rows, dir, folderID) {
+  const csvStream = csv.format({
+    headers: true,
+    quoteHeaders: false,
+    quoteColumns: {
+      identifier: true,
+      generalNote: true,
+    },
+  });
+  if (options.writeLocalOutputCopy) {
+    const debugCSVOutput = fs.createWriteStream(path.resolve(__dirname, '..', logsDirectory, './last-output-ISAD.csv'))
+      .on('error', console.error);
+    csvStream.pipe(debugCSVOutput);
+  }
+  if (options.writeSourceMetadata) {
+    const prodCSVOutput = fs.createWriteStream(path.resolve(dir, `${folderID}.apmeta.csv`))
+      .on('error', console.error);
+    csvStream.pipe(prodCSVOutput);
+  }
+  rows.forEach(csvStream.write);
+  csvStream.end();
 }
