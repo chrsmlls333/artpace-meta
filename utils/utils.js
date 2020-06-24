@@ -77,9 +77,10 @@ const utils = {
   
   /**
    * Function to interpret byte size in human-readable text
-   * @param {Number}  bytes       Data size represented in bytes
-   * @param {Boolean} [si=false]  Metric (power-of-ten) notation or Binary (power-of-two) notation
-   * @param {Number}  [dp=1]      Decimal places?
+   * @param   {Number}  bytes       Data size represented in bytes
+   * @param   {Boolean} [si=false]  Metric (power-of-ten) notation or Binary (power-of-two) notation
+   * @param   {Number}  [dp=1]      Decimal places?
+   * @returns {String}
    */
   humanFileSize(bytes, si = false, dp = 1) {
     let b = bytes; 

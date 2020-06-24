@@ -142,7 +142,7 @@ async function define(argv) {
 
 /**
  * A container for the metrics detected by Artpace Metadata Creator about each filepath
- * @typedef {Object}    FileObject
+ * @typedef  {Object}   FileObject
  * @property {String}   path            File path
  * @property {Date}     modified    
  * @property {Boolean}  image           Check for isImage?
