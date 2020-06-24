@@ -100,6 +100,14 @@ const utils = {
     return `${b.toFixed(dp)} ${units[u]}`;
   },
 
+  /**
+   * Generate folder ID for APMETA.CSV files
+   * @returns  {String} A 9-byte, 18-char ID
+   */
+  generateFolderID() {
+    return require('crypto').randomBytes(9).toString('hex');
+  },
+
 };
 
 module.exports = utils;

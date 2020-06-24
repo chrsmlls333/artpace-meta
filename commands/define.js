@@ -28,6 +28,7 @@ const {
   allEqual, 
   breakCamelCase, 
   longCommand,
+  generateFolderID,
 } = require('../utils/utils');
 String.prototype.breakCamelCase = breakCamelCase;
 
@@ -124,8 +125,11 @@ async function define(argv) {
       .localeCompare(path.parse(b.path).name, 'en', { numeric: true })) // Natural Sort
     .map(isadFileFormatter);
 
+  // Give this mess an Identifier
+  const folderID = generateFolderID();
+
   // Put in a File Folder
-  isad = isadContainerAddTransform(isad, source);
+  isad = isadContainerAddTransform(isad, source, folderID);
   
   // Write CSV!!
   const csvPromise = converter.json2csvAsync(isad, json2csvOptions);
@@ -474,10 +478,11 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
  * Consolidate repeated data from items to container entry
  * @param   {isadEntry[]}  isadEntries
  * @param   {String}       dirname    Root source filepath for working directory
- * @returns {isadEntry[]}   
+ * @param   {String}       folderId   ID to pass into container metadata, 
+ *                                      should be generated with generateFolderID in utils
+ * @returns {isadEntry[]}             All entries plus the new container entry in [0]
  */
-function isadContainerAddTransform(isadEntries, dirname) {
-  const folderId = crypto.randomBytes(9).toString('hex');
+function isadContainerAddTransform(isadEntries, dirname, folderId) {
   const legacyId = isadEntries.length + 1;
   const isadParentEntry = {
     // ...isadEntryTemplate,
