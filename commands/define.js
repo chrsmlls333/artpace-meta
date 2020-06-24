@@ -129,8 +129,27 @@ async function define(argv) {
   // Put in a File Folder
   isad = isadContainerAddTransform(isad, source, folderID);
   
-  // Write CSV!!
-  writeCSV(isad, source, folderID, !dry);
+  // Build CSV
+  const csvData = await csv.writeToString(isad, {
+    headers: true,
+    quoteHeaders: false,
+    quoteColumns: {
+      identifier: true,
+      generalNote: true,
+    },
+  });
+
+  // Write Debug CSV
+  if (options.writeLocalOutputCopy) {
+    await fsp.writeFile(path.resolve(__dirname, '..', logsDirectory, './last-output-ISAD.csv'), csvData)
+      .catch(err => console.error(err.message));
+  }
+
+  // Write Source CSV
+  if (!dry) {
+    await fsp.writeFile(path.resolve(source, `${folderID}.apmeta.csv`), csvData)
+      .catch(err => console.error(err.message));
+  }
 
   // Open
   // sh.exec(`open '${source}'`);
@@ -562,36 +581,4 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
   // Add parent entry
   isadAll.unshift(isadParentEntry);
   return isadAll;
-}
-
-/**
- * Write CSV ISAD records to local and remote apmeta.csv files
- * @todo                                Container function with messy dependencies. 
- *                                      Needs cleanup/compartmentalization to add to reusability
- * @requires  fast-csv
- * @param     {ISADEntry[]}  rows       ISAD entry rows as objects
- * @param     {String}       dir        Root source filepath for working directory
- * @param     {String}       folderId   ID to pass into container metadata, 
- *                                      should be generated with generateFolderID in utils
- * @param     {Boolean}      writeProd  Whether to actually create apmeta.csv in source folder
- */
-function writeCSV(rows, dir, folderID, writeProd = true) {
-  const csvStream = csv.format({
-    headers: true,
-    quoteHeaders: false,
-    quoteColumns: {
-      identifier: true,
-      generalNote: true,
-    },
-  });
-  if (options.writeLocalOutputCopy) {
-    const debugCSVOutput = fs.createWriteStream(path.resolve(__dirname, '..', logsDirectory, './last-output-ISAD.csv'));
-    csvStream.pipe(debugCSVOutput);
-  }
-  if (writeProd) {
-    const prodCSVOutput = fs.createWriteStream(path.resolve(dir, `${folderID}.apmeta.csv`));
-    csvStream.pipe(prodCSVOutput);
-  }
-  rows.forEach(row => csvStream.write(row));
-  csvStream.end();
 }
