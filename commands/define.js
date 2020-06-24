@@ -33,15 +33,22 @@ const options = optionsAll.commands.define;
 // ==================================================
 
 module.exports = {
-  command: 'define [source]',
+  command: 'define [source] [--dry]',
 
   desc: 'Initial pass to create metadata for folder contents. Sniff as many details from current directory into an \'apmeta\' resource file. This file follows ISAD templating for use with Access to Memory.',
 
   builder: {
     source: {
-      describe: 'Folder to create into a Artpace Archival Packet',
+      describe: 'Folder to create into a Artpace Archival Packet.',
+      alias: ['directory'],
       type: 'string',
       default: '.',
+    },
+    dry: {
+      describe: 'Whether to abstain from writing apmeta.csv to source folder.',
+      alias: ['d', 'test'],
+      type: 'boolean',
+      default: false,
     },
   },
 
@@ -53,13 +60,15 @@ module.exports = {
 /**
  * Yargs Command Handler
  * 
- * @param {Object} argv         Yargs Arguments Variable
- * @param {String} argv.source  Working Directory
+ * @param {Object}  argv         Yargs Arguments Variable
+ * @param {String}  argv.source  Working Directory
+ * @param {Boolean} argv.dry     Don't write apmeta.csv
  */
 async function define(argv) {
 
   const source = path.resolve(argv.source);
-  console.log(`Looking at: ${source}`);
+  const { dry } = argv;
+  console.log(`${dry ? 'Taking a look at' : 'Creating Artpace Metadata Package at'}: ${source}`);
   
   // Check for directory
   const isDirectory = await fsp.stat(source)
