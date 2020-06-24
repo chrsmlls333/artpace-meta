@@ -21,26 +21,15 @@ const FuzzySet = require('fuzzyset');
 const converter = require('json-2-csv');
 const json2csvOptions = require('../configuration/json2csvConfig.json');
 
-const loadArtists = require('../utils/loadArtists');
-
-const { 
-  allEqual, 
-  breakCamelCase, 
-  longCommand,
-  generateFolderID,
-} = require('../utils/utils');
-String.prototype.breakCamelCase = breakCamelCase;
+const utils = require('../utils/utils');
+utils.loadArtists = require('../utils/loadArtists');
+String.prototype.breakCamelCase = utils.breakCamelCase;
 
 // const isadEntryTemplate = require('../configuration/Example_information_objects_isad-2.6.js');
 
-const options = require('../configuration/options.json');
-const { logsDirectory } = options;
-const { 
-  noRecurse, 
-  exifReadSizeBytes,
-  includeExtISADTitle, 
-  fuzzyArtistMatchMinThreshold,
-} = options.commands.define;
+const optionsAll = require('../configuration/options.json');
+const { logsDirectory } = optionsAll;
+const options = optionsAll.commands.define;
 
 // ==================================================
 
@@ -85,7 +74,7 @@ async function define(argv) {
     .catch((err) => {
       throw new Error(`Unable to scan directory: ${err}`);
     });
-  if (noRecurse) files = files.filter((v) => !fs.statSync(v).isDirectory());
+  if (options.noRecurse) files = files.filter((v) => !fs.statSync(v).isDirectory());
   
   // Convert to Objects
   files = files.map(v => ({ path: v }));
@@ -107,7 +96,7 @@ async function define(argv) {
   
   // Find Artist Mentions
   const artistsFuzzySet = FuzzySet();
-  const artistList = await loadArtists();
+  const artistList = await utils.loadArtists();
   artistList.forEach(a => { artistsFuzzySet.add(a.authorizedFormOfName); });
   files = files.map(f => findArtistMentions(f, artistList, artistsFuzzySet));
 
@@ -115,8 +104,10 @@ async function define(argv) {
   files = files.map(f => tagPathTokens(f, source));
       
   // Debug out
+  if (options.writeLocalOutputCopy) {
   const debugFiles = files.map(f => ({ ...f, tags: Array.from(f.tags) }));
   fs.writeFileSync(path.resolve(__dirname, '..', logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
+  }
   
   // Build ISAD Items
   let isad = files
@@ -125,7 +116,7 @@ async function define(argv) {
     .map(isadFileFormatter);
 
   // Give this mess an Identifier
-  const folderID = generateFolderID();
+  const folderID = utils.generateFolderID();
 
   // Put in a File Folder
   isad = isadContainerAddTransform(isad, source, folderID);
@@ -172,7 +163,7 @@ async function siegfriedScan(fileObject) {
 
   // Go wild
   const basename = path.basename(fileObject.path);
-  const sfJSON = await longCommand(`sf -nr -json '${fileObject.path}'`, `Siegfried ${basename}`).then(JSON.parse);
+  const sfJSON = await utils.longCommand(`sf -nr -json '${fileObject.path}'`, `Siegfried ${basename}`).then(JSON.parse);
 
   if (!sfJSON.files.length) throw new Error('Siegfried no files...');
   const report = sfJSON.files[0];
@@ -197,8 +188,8 @@ async function mediaInfoScan(fileObject) {
 
   // Go wild
   const basename = path.basename(fileObject.path);
-  const mediainforeport = await longCommand(`mediainfo '${fileObject.path}'`, `MediaInfo (1) ${basename}`);
-  const mediainfoJSON = await longCommand(`mediainfo --Output=JSON '${fileObject.path}'`, `MediaInfo (2) ${basename}`).then(JSON.parse);
+  const mediainforeport = await utils.longCommand(`mediainfo '${fileObject.path}'`, `MediaInfo (1) ${basename}`);
+  const mediainfoJSON = await utils.longCommand(`mediainfo --Output=JSON '${fileObject.path}'`, `MediaInfo (2) ${basename}`).then(JSON.parse);
 
   return {
     ...fileObject,
@@ -223,8 +214,8 @@ async function exifTagScan(fileObject) {
   if (!fileObject.image) return fileObject;
   return fsp.open(fileObject.path, 'r')
     .then(filehandle => {
-      const b = Buffer.alloc(exifReadSizeBytes);
-      return filehandle.read(b, 0, exifReadSizeBytes, 0)
+      const b = Buffer.alloc(options.exifReadSizeBytes);
+      return filehandle.read(b, 0, options.exifReadSizeBytes, 0)
         .then(() => {
           filehandle.close();
           return b;
@@ -329,7 +320,7 @@ function detectCreditsInPathAndTags(fileObject) {
   credits.push(...pathCredits);
 
   // Unique and Fix camelCase
-  credits = [...new Set(credits)].map(breakCamelCase);
+  credits = [...new Set(credits)].map(utils.breakCamelCase);
 
   // Get longest? Dubious
   if (credits.length) {
@@ -360,7 +351,7 @@ function findArtistMentions(fileObject, artists, fuzzy) {
     .filter(t => !t.match(/credit/i))
     .map(s => s.trim())
     .forEach(s => {
-      const match = fuzzy.get(s, [], fuzzyArtistMatchMinThreshold);
+      const match = fuzzy.get(s, [], options.fuzzyArtistMatchMinThreshold);
       names.push(...match.map(e => e[1]));
       // if (match.length) console.log(s, match);
     });
@@ -412,7 +403,7 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
     qubitParentSlug: '',
     identifier: `#${(i + 1).toString().padStart(3, '0')}`,
     // accessionNumber: '',
-    title: (includeExtISADTitle ? path.parse(f.path).base : path.parse(f.path).name)
+    title: (options.includeExtISADTitle ? path.parse(f.path).base : path.parse(f.path).name)
       .replace(/[_-]/g, ' ')
       .breakCamelCase(),
     levelOfDescription: 'Item',
@@ -503,15 +494,15 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
     // appraisal: '',
     // accruals: '',
     // arrangement: '',
-    accessConditions: allEqual(isadEntries.map(v => v.accessConditions)),
-    reproductionConditions: allEqual(isadEntries.map(v => v.reproductionConditions)),
+    accessConditions: utils.allEqual(isadEntries.map(v => v.accessConditions)),
+    reproductionConditions: utils.allEqual(isadEntries.map(v => v.reproductionConditions)),
     language: 'en', 
     // script: '',
     // languageNote: '',
     physicalCharacteristics: '',
     // findingAids: '',
-    locationOfOriginals: allEqual(isadEntries.map(v => v.locationOfOriginals)),
-    locationOfCopies: allEqual(isadEntries.map(v => v.locationOfCopies)),
+    locationOfOriginals: utils.allEqual(isadEntries.map(v => v.locationOfOriginals)),
+    locationOfCopies: utils.allEqual(isadEntries.map(v => v.locationOfCopies)),
     // relatedUnitsOfDescription: '',
     // publicationNote: '',
     digitalObjectPath: '',
@@ -548,7 +539,7 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
 
   // Inherit homogenous data and delete
   Object.keys(isadEntries[0]).forEach(k => {
-    const match = allEqual(isadEntries.map(v => v[k]));
+    const match = utils.allEqual(isadEntries.map(v => v[k]));
     if (match && (match === isadParentEntry[k] || isadParentEntry[k] === '')) {
       isadParentEntry[k] = match;
       isadEntries.forEach(e => delete e[k]);
