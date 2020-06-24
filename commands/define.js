@@ -486,7 +486,10 @@ function isadContainerAddTransform(isadEntries, dirname) {
     qubitParentSlug: '',
     identifier: folderId,
     // accessionNumber: '',
-    title: path.basename(dirname),
+    title: (() => {
+      const pathArr = dirname.split(path.sep);
+      return pathArr.slice(Math.max(pathArr.length - 3, 0)).join(', ');
+    })(),
     levelOfDescription: 'File',
     extentAndMedium: `${isadEntries.length} digital object${isadEntries.length === 1 ? '' : 's'}`,
     // repository: '',
