@@ -401,7 +401,7 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
     legacyId: i + 1,
     parentId: '',
     qubitParentSlug: '',
-    identifier: `#${(i + 1).toString().padStart(3, '0')}`,
+    identifier: `${(i + 1).toString().padStart(3, '0')}`,
     // accessionNumber: '',
     title: (options.includeExtISADTitle ? path.parse(f.path).base : path.parse(f.path).name)
       .replace(/[_-]/g, ' ')
@@ -480,7 +480,7 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
     legacyId,
     parentId: '',
     qubitParentSlug: '',
-    identifier: folderId,
+    identifier: '',
     // accessionNumber: '',
     title: (() => {
       const pathArr = dirname.split(path.sep);
@@ -528,7 +528,7 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
     physicalObjectLocation: '',
     physicalObjectType: '',
     alternativeIdentifiers: folderId,
-    alternativeIdentifierLabels: 'apmeta-folderID',
+    alternativeIdentifierLabels: 'apmeta ID',
     // eventDates: ,
     // eventTypes: ,
     // eventStartDates: ,
