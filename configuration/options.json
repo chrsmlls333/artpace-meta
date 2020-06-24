@@ -7,8 +7,7 @@
       "exifReadSizeBytes": 1000000,
       "includeExtISADTitle": true,
       "fuzzyArtistMatchMinThreshold": 0.57,
-      "writeLocalOutputCopy": true,
-      "writeSourceMetadata": false
+      "writeLocalOutputCopy": true
     }
   },
   

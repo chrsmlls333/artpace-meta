@@ -130,7 +130,7 @@ async function define(argv) {
   isad = isadContainerAddTransform(isad, source, folderID);
   
   // Write CSV!!
-  writeCSV(isad);
+  writeCSV(isad, source, folderID, !dry);
 
   // Open
   // sh.exec(`open '${source}'`);
@@ -573,8 +573,9 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
  * @param     {String}       dir        Root source filepath for working directory
  * @param     {String}       folderId   ID to pass into container metadata, 
  *                                      should be generated with generateFolderID in utils
+ * @param     {Boolean}      writeProd  Whether to actually create apmeta.csv in source folder
  */
-function writeCSV(rows, dir, folderID) {
+function writeCSV(rows, dir, folderID, writeProd = true) {
   const csvStream = csv.format({
     headers: true,
     quoteHeaders: false,
@@ -584,15 +585,13 @@ function writeCSV(rows, dir, folderID) {
     },
   });
   if (options.writeLocalOutputCopy) {
-    const debugCSVOutput = fs.createWriteStream(path.resolve(__dirname, '..', logsDirectory, './last-output-ISAD.csv'))
-      .on('error', console.error);
+    const debugCSVOutput = fs.createWriteStream(path.resolve(__dirname, '..', logsDirectory, './last-output-ISAD.csv'));
     csvStream.pipe(debugCSVOutput);
   }
-  if (options.writeSourceMetadata) {
-    const prodCSVOutput = fs.createWriteStream(path.resolve(dir, `${folderID}.apmeta.csv`))
-      .on('error', console.error);
+  if (writeProd) {
+    const prodCSVOutput = fs.createWriteStream(path.resolve(dir, `${folderID}.apmeta.csv`));
     csvStream.pipe(prodCSVOutput);
   }
-  rows.forEach(csvStream.write);
+  rows.forEach(row => csvStream.write(row));
   csvStream.end();
 }
