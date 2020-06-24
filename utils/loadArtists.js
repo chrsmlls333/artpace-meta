@@ -3,32 +3,32 @@
  * @description Pulls in the AtoM Authority Record CSV to create an Artist List for tagging
  */
 
-const path = require('path');
-const fs = require('fs');
-const fsp = fs.promises;
+/* eslint-disable no-multi-assign, no-unused-vars */
 
-const converter = require('json-2-csv');
-const csv2jsonOptions = require('../configuration/json2csvConfig.json');
+const path = require('path');
+const csv = require('fast-csv');
 
 const { artistsAtomTemplateCSV } = require('../configuration/options.json').resources;
 
-const artistList = () => fsp.readFile(path.resolve(__dirname, '..', artistsAtomTemplateCSV), { encoding: 'utf-8' })
-  .then(data => new Promise((resolve, reject) => {
-    converter.csv2json(data, (err, json) => {
-      if (err) reject(err);
-      resolve(json);
-    }, {
-      ...csv2jsonOptions,
-      keys: [ 
-        'authorizedFormOfName',
-        'subjectAccessPoints',
-      ],
-    });
-  }))
-  .then(json => json.map(e => ({
-    ...e,
-    subjectAccessPoints: (e.subjectAccessPoints && e.subjectAccessPoints.split('|')) || [],
-  })))
-  .catch(console.error);
+// ========================================================================================
 
-module.exports = artistList;
+const artistList = module.exports = () => new Promise((resolve, reject) => {
+  const file = path.resolve(__dirname, '..', artistsAtomTemplateCSV);
+  const data = [];
+  csv.parseFile(file, {
+    headers: true,
+    encoding: 'utf8',
+  })
+    .on('data', record => {
+      const filtered = (({ 
+        authorizedFormOfName, 
+        subjectAccessPoints,
+      }) => ({ 
+        authorizedFormOfName, 
+        subjectAccessPoints: (subjectAccessPoints && subjectAccessPoints.split('|')) || [],
+      }))(record);
+      data.push(filtered);
+    })
+    .on('data-invalid', reject)
+    .on('end', () => resolve(data));
+});
