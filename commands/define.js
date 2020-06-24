@@ -24,7 +24,7 @@ const utils = require('../utils/utils');
 utils.loadArtists = require('../utils/loadArtists');
 String.prototype.breakCamelCase = utils.breakCamelCase;
 
-// const isadEntryTemplate = require('../configuration/Example_information_objects_isad-2.6.js');
+const ISADEntryTemplate = require('../resources/ISADEntryTemplate-2.6');
 
 const optionsAll = require('../configuration/options.json');
 const { logsDirectory } = optionsAll;
@@ -383,6 +383,11 @@ function tagPathTokens(fileObject, dirPath = path.dirname(fileObject.path)) {
 // =============================================================
 
 /**
+ * Container Object based on AtoM ISAD(G) Archival Description CSV import template
+ * @typedef  {Object}   ISADEntry
+ */
+
+/**
  * Build AtoM ISAD(G) CSV-line Objects for each FileObject
  * @param   {FileObject}   fileObject 
  * @param   {Number}       i                index in alpha-sorted fileObjectArray
@@ -461,11 +466,12 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
 /**
  * Build AtoM ISAD(G) CSV-line Object for container
  * Consolidate repeated data from items to container entry
- * @param   {isadEntry[]}  isadEntries
+ * @param   {ISADEntry[]}  isadEntries
  * @param   {String}       dirname    Root source filepath for working directory
  * @param   {String}       folderId   ID to pass into container metadata, 
- *                                      should be generated with generateFolderID in utils
- * @returns {isadEntry[]}             All entries plus the new container entry in [0]
+ *                                    should be generated with generateFolderID in utils
+ * @returns {ISADEntry[]}             
+ *                                    All entries plus the new container entry in [0]
  */
 function isadContainerAddTransform(isadEntries, dirname, folderId) {
   const legacyId = isadEntries.length + 1;
@@ -552,12 +558,12 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
 /**
  * Write CSV ISAD records to local and remote apmeta.csv files
  * @todo                                Container function with messy dependencies. 
- *                                        Needs cleanup/compartmentalization to add to reusability
+ *                                      Needs cleanup/compartmentalization to add to reusability
  * @requires  fast-csv
  * @param     {ISADEntry[]}  rows       ISAD entry rows as objects
  * @param     {String}       dir        Root source filepath for working directory
  * @param     {String}       folderId   ID to pass into container metadata, 
- *                                        should be generated with generateFolderID in utils
+ *                                      should be generated with generateFolderID in utils
  */
 function writeCSV(rows, dir, folderID) {
   const csvStream = csv.format({

@@ -1,4 +1,13 @@
-const isadEntryTemplate = {
+/* eslint-disable no-unused-vars, no-multi-assign */
+
+/**
+ * An example of ISADEntry with all fields
+ * @module  resources/ISADEntryTemplate-2.6
+ * @type    {import("../commands/define").ISADEntry}
+ * @exports ISADEntryTemplate
+ */
+
+const ISADEntryTemplate = module.exports = {
   legacyId: '',
   parentId: '',
   qubitParentSlug: '',
@@ -56,5 +65,3 @@ const isadEntryTemplate = {
   eventActorHistories: '',
   culture: '',
 };
-
-module.exports = isadEntryTemplate;
