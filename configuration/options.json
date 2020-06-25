@@ -12,5 +12,22 @@
   
   "resources": {
     "artistsAtomTemplateCSV": "./resources/AtomAuthorityRecordsCSV_2020.06.05.csv"
+  },
+
+  "apmetaFormat": {
+    "path": {
+      "ext": ".apmeta.csv",
+      "extBackup": ".bak" 
+    },
+    "fastcsv": {
+      "writeOptions": {
+        "headers": true,
+        "quoteHeaders": false,
+        "quoteColumns": {
+          "identifier": true,
+          "generalNote": true
+        }
+      } 
+    }
   }
 }

@@ -26,16 +26,15 @@ String.prototype.breakCamelCase = utils.breakCamelCase;
 
 const ISADEntryTemplate = require('../resources/ISADEntryTemplate-2.6');
 
-const optionsAll = require('../configuration/options.json');
-const { logsDirectory } = optionsAll;
-const options = optionsAll.commands.define;
+const options = require('../configuration/options.json');
+const defineOptions = options.commands.define;
 
 // ==================================================
 
 module.exports = {
   command: 'define [source]',
 
-  desc: 'Initial pass to create metadata for folder contents. Sniff as many details from current directory into an \'apmeta\' resource file. This file follows ISAD templating for use with Access to Memory.',
+  desc: `Initial pass to create metadata for folder contents. Sniff as many details from current directory into an '${options.apmetaFormat.path.ext}' resource file. This file follows ISAD templating for use with Access to Memory.`,
 
   builder: {
     source: {
@@ -120,9 +119,9 @@ async function define(argv) {
   files = files.map(f => tagPathTokens(f, source));
       
   // Debug out
-  if (options.writeLocalOutputCopy) {
+  if (defineOptions.writeLocalOutputCopy) {
     const debugFiles = files.map(f => ({ ...f, tags: Array.from(f.tags) }));
-    fs.writeFileSync(path.resolve(__dirname, '..', logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
+    fs.writeFileSync(path.resolve(__dirname, '..', options.logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
   }
   
   // Build ISAD Items
@@ -138,24 +137,17 @@ async function define(argv) {
   isad = isadContainerAddTransform(isad, source, folderID);
   
   // Build CSV
-  const csvData = await csv.writeToString(isad, {
-    headers: true,
-    quoteHeaders: false,
-    quoteColumns: {
-      identifier: true,
-      generalNote: true,
-    },
-  });
+  const csvData = await csv.writeToString(isad, options.apmetaFormat.fastcsv.writeOptions);
 
   // Write Debug CSV
-  if (options.writeLocalOutputCopy) {
-    await fsp.writeFile(path.resolve(__dirname, '..', logsDirectory, './last-output-ISAD.csv'), csvData)
+  if (defineOptions.writeLocalOutputCopy) {
+    await fsp.writeFile(path.resolve(__dirname, '..', options.logsDirectory, `./last-output-ISAD${options.apmetaFormat.path.ext}`), csvData)
       .catch(err => console.error(err.message));
   }
 
   // Write Source CSV
   if (!dry) {
-    await fsp.writeFile(path.resolve(source, `${folderID}.apmeta.csv`), csvData)
+    await fsp.writeFile(path.resolve(source, `${folderID}${options.apmetaFormat.path.ext}`), csvData)
       .catch(err => console.error(err.message));
   }
 
@@ -245,8 +237,8 @@ async function exifTagScan(fileObject) {
   if (!fileObject.image) return fileObject;
   return fsp.open(fileObject.path, 'r')
     .then(filehandle => {
-      const b = Buffer.alloc(options.exifReadSizeBytes);
-      return filehandle.read(b, 0, options.exifReadSizeBytes, 0)
+      const b = Buffer.alloc(defineOptions.exifReadSizeBytes);
+      return filehandle.read(b, 0, defineOptions.exifReadSizeBytes, 0)
         .then(() => {
           filehandle.close();
           return b;
@@ -382,7 +374,7 @@ function findArtistMentions(fileObject, artists, fuzzy) {
     .filter(t => !t.match(/credit/i))
     .map(s => s.trim())
     .forEach(s => {
-      const match = fuzzy.get(s, [], options.fuzzyArtistMatchMinThreshold);
+      const match = fuzzy.get(s, [], defineOptions.fuzzyArtistMatchMinThreshold);
       names.push(...match.map(e => e[1]));
       // if (match.length) console.log(s, match);
     });
@@ -439,7 +431,7 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
     qubitParentSlug: '',
     identifier: `${(i + 1).toString().padStart(3, '0')}`,
     // accessionNumber: '',
-    title: (options.includeExtISADTitle ? path.parse(f.path).base : path.parse(f.path).name)
+    title: (defineOptions.includeExtISADTitle ? path.parse(f.path).base : path.parse(f.path).name)
       .replace(/[_-]/g, ' ')
       .breakCamelCase(),
     levelOfDescription: 'Item',
