@@ -33,7 +33,7 @@ const options = optionsAll.commands.define;
 // ==================================================
 
 module.exports = {
-  command: 'define [source] [--dry]',
+  command: 'define [source]',
 
   desc: 'Initial pass to create metadata for folder contents. Sniff as many details from current directory into an \'apmeta\' resource file. This file follows ISAD templating for use with Access to Memory.',
 
@@ -49,6 +49,14 @@ module.exports = {
       alias: ['d', 'test'],
       type: 'boolean',
       default: false,
+    },
+    recurse: {
+      describe: 'Recurse through source directory.',
+      alias: ['r'],
+      type: 'boolean',
+      default: false,
+      hidden: true,
+      choices: [false], // Force false, not implemented
     },
   },
 
@@ -67,7 +75,7 @@ module.exports = {
 async function define(argv) {
 
   const source = path.resolve(argv.source);
-  const { dry } = argv;
+  const { dry, recurse } = argv;
   console.log(`${dry ? 'Taking a look at' : 'Creating Artpace Metadata Package at'}: ${source}`);
   
   // Check for directory
@@ -82,7 +90,7 @@ async function define(argv) {
     .catch((err) => {
       throw new Error(`Unable to scan directory: ${err}`);
     });
-  if (options.noRecurse) files = files.filter((v) => !fs.statSync(v).isDirectory());
+  if (!recurse) files = files.filter((v) => !fs.statSync(v).isDirectory());
   
   // Convert to Objects
   files = files.map(v => ({ path: v }));
