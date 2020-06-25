@@ -85,8 +85,7 @@ async function define(argv) {
   // Get Directory
   let files = await fsp.readdir(source)
     .then(list => list.filter(junk.not))
-    .then((list) => list.map(v => path.join(source, v)))
-    .catch((err) => {
+    .then(list => list.filter(f => !f.startsWith('.')))
       throw new Error(`Unable to scan directory: ${err}`);
     });
   if (!recurse) files = files.filter((v) => !fs.statSync(v).isDirectory());
