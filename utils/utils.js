@@ -102,10 +102,20 @@ const utils = {
 
   /**
    * Generate folder ID for APMETA.CSV files
+   * @requires crypto
    * @returns  {String} A 9-byte, 18-char ID
    */
   generateFolderID() {
     return require('crypto').randomBytes(9).toString('hex');
+  },
+
+  /**
+   * Verify folder ID format for APMETA.CSV files (9-byte, 18-char ID)
+   * @param   {String}  id  Potential Identifier
+   * @returns {Boolean}     Verification Status
+   */
+  verifyFolderID(id) {
+    return !!id.match(/^[a-fA-F0-9]{18}$/);
   },
 
 };

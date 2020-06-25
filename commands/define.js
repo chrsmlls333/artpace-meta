@@ -86,9 +86,30 @@ async function define(argv) {
   let files = await fsp.readdir(source)
     .then(list => list.filter(junk.not))
     .then(list => list.filter(f => !f.startsWith('.')))
+    .then(list => list.filter(f => !f.endsWith(options.apmetaFormat.path.extBackup)))
+    .then(list => list.map(v => path.join(source, v)))
+    .catch(err => {
       throw new Error(`Unable to scan directory: ${err}`);
     });
   if (!recurse) files = files.filter((v) => !fs.statSync(v).isDirectory());
+
+  // Find previous APMETA or create new ID
+  let folderID = utils.generateFolderID();
+  const prevMeta = files.find(f => f.endsWith(options.apmetaFormat.path.ext));
+  if (prevMeta) {
+    // Remove from Directory listing
+    files = files.filter(f => f !== prevMeta);
+    // If ID is valid, move forward as an overwriting behaviour
+    const prevMetaBase = path.basename(prevMeta);
+    const name = prevMetaBase.replace(options.apmetaFormat.path.ext, '');
+    if (defineOptions.overwritePreviousMetafile && utils.verifyFolderID(name)) {
+      console.log(`Overwriting previous metafile: ${prevMetaBase}`);
+      folderID = name;
+    } else {
+      console.log(`Found previous metafile: ${prevMetaBase}`);
+    }
+    // TODO create backup before overwrite, fs fatal error
+  }
   
   // Convert to Objects
   files = files.map(v => ({ path: v }));
@@ -128,9 +149,6 @@ async function define(argv) {
     .sort((a, b) => ('' + path.parse(a.path).name) // eslint-disable-line prefer-template
       .localeCompare(path.parse(b.path).name, 'en', { numeric: true })) // Natural Sort
     .map(isadFileFormatter);
-
-  // Give this mess an Identifier
-  const folderID = utils.generateFolderID();
 
   // Put in a File Folder
   isad = isadContainerAddTransform(isad, source, folderID);
