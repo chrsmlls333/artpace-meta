@@ -1,7 +1,7 @@
 /* eslint-disable import/order */
 
 const path = require('path');
-const { logsDirectory } = require('./options.json');
+const { logsDirectory } = require('./options.json').resources;
 require('fs').mkdirSync(path.resolve(logsDirectory), { recursive: true });
 
 const winston = require('winston');

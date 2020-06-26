@@ -12,7 +12,7 @@ const yargs = require('yargs');
 
 // =================================================
 
-const { logsDirectory } = require('./configuration/options.json');
+const { logsDirectory } = require('./configuration/options.json').resources;
 fs.mkdirSync(path.resolve(logsDirectory), { recursive: true });
 // const logger = require('./configuration/logConfig');
 

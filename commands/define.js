@@ -159,7 +159,7 @@ async function define(argv) {
   if (defineOptions.writeLocalOutputCopy) {
     utils.stepNotify(`Writing JSON to logs...`);
     const debugFiles = files.map(f => ({ ...f, tags: Array.from(f.tags) }));
-    fs.writeFileSync(path.resolve(__dirname, '..', options.logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
+    fs.writeFileSync(path.resolve(__dirname, '..', options.resources.logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
   }
   
   // Build ISAD Items
@@ -177,7 +177,7 @@ async function define(argv) {
   // Write Debug CSV
   if (defineOptions.writeLocalOutputCopy) {
     utils.stepNotify(`Writing ${options.apmetaFormat.path.ext} to logs...`);
-    await fsp.writeFile(path.resolve(__dirname, '..', options.logsDirectory, `./last-output-ISAD${options.apmetaFormat.path.ext}`), csvData);
+    await fsp.writeFile(path.resolve(__dirname, '..', options.resources.logsDirectory, `./last-output-ISAD${options.apmetaFormat.path.ext}`), csvData);
   }
 
   // Write Source CSV
