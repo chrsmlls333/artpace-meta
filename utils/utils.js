@@ -124,6 +124,18 @@ const utils = {
   },
 
   /**
+   * Shorthand Function to report stepped progress
+   * Handles spacing for step numbers into the hundreds
+   * @param {String}  message Message to accompany step
+   * @param {Boolean} [reset] Trigger a counter reset to 1
+   * @todo                    Use Winston logging here
+   */
+  stepNotify(message, reset = false) {
+    if (typeof utils.stepNotify.step === 'undefined' || reset) utils.stepNotify.step = 1;
+    console.log((`[${utils.stepNotify.step++}] `).padEnd(6, ' ') + message);
+  },
+
+  /**
    * Check if a file is an Artpace Metafile
    * @requires path
    * @requires fs

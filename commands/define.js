@@ -96,6 +96,7 @@ async function define(argv) {
   if (!recurse) files = files.filter((v) => !fs.statSync(v).isDirectory());
 
   // Find previous APMETA or create new ID
+  utils.stepNotify(`Initialize Job...`);
   let folderID = utils.generateFolderID();
   const prevMeta = files.find(f => f.endsWith(options.apmetaFormat.path.ext));
   if (prevMeta) {
@@ -117,24 +118,31 @@ async function define(argv) {
   files = files.map(v => ({ path: v }));
 
   // Get Checksums
+  utils.stepNotify(`Generate Checksums...`);
   files = await Promise.all(files.map(generateChecksum));
 
   // Run Siegfried file identification report
+  utils.stepNotify(`Get Siegfried File ID...`);
   files = await Promise.all(files.map(siegfriedScan));
 
   // Run MediaInfo Report
+  utils.stepNotify(`Get MediaInfo Reports...`);
   files = await Promise.all(files.map(mediaInfoScan));
   
   // EXIF Tags
+  utils.stepNotify(`Scraping EXIF/IPTC Tags...`);
   files = await Promise.all(files.map(exifTagScan));
 
   // Dates
+  utils.stepNotify(`Looking for Dates...`);
   files = files.map(detectDates);
 
   // Find Credit Mentions
+  utils.stepNotify(`Looking for Credit/Copyright Mentions...`);
   files = files.map(detectCreditsInPathAndTags);
   
   // Find Artist Mentions
+  utils.stepNotify(`Looking for Artists...`);
   const artistsFuzzySet = FuzzySet();
   const artistList = await utils.loadArtists();
   artistList.forEach(a => { artistsFuzzySet.add(a.authorizedFormOfName); });
@@ -145,16 +153,17 @@ async function define(argv) {
       
   // Debug out
   if (defineOptions.writeLocalOutputCopy) {
+    utils.stepNotify(`Writing JSON to logs...`);
     const debugFiles = files.map(f => ({ ...f, tags: Array.from(f.tags) }));
     fs.writeFileSync(path.resolve(__dirname, '..', options.logsDirectory, './last-output-debug.json'), JSON.stringify(debugFiles, null, 2), { encoding: 'utf8' });
   }
   
   // Build ISAD Items
+  utils.stepNotify(`Building ISAD(G) Entries...`);
   let isad = files
     .sort((a, b) => ('' + path.parse(a.path).name) // eslint-disable-line prefer-template
       .localeCompare(path.parse(b.path).name, 'en', { numeric: true })) // Natural Sort
     .map(isadFileFormatter);
-
   // Put in a File Folder
   isad = isadContainerAddTransform(isad, source, folderID);
   
@@ -163,12 +172,14 @@ async function define(argv) {
 
   // Write Debug CSV
   if (defineOptions.writeLocalOutputCopy) {
+    utils.stepNotify(`Writing ${options.apmetaFormat.path.ext} to logs...`);
     await fsp.writeFile(path.resolve(__dirname, '..', options.logsDirectory, `./last-output-ISAD${options.apmetaFormat.path.ext}`), csvData)
       .catch(err => console.error(err.message));
   }
 
   // Write Source CSV
   if (!dry) {
+    utils.stepNotify(`Writing ${options.apmetaFormat.path.ext} to source...`);
     await fsp.writeFile(path.resolve(source, `${folderID}${options.apmetaFormat.path.ext}`), csvData)
       .catch(err => console.error(err.message));
   }
