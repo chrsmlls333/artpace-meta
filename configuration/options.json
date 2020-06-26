@@ -28,6 +28,9 @@
           "identifier": true,
           "generalNote": true
         }
+      },
+      "readOptions": {
+        "headers": true
       } 
     }
   }

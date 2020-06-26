@@ -101,6 +101,18 @@ const utils = {
   },
 
   /**
+   * Check if a file is an Artpace Metafile
+   * @requires path
+   * @param    {String}  p   File path
+   * @returns  {Boolean}     Whether the file is an apmeta.csv file
+   * @todo                   Add fs.exists, file checking, and csv validation to certify
+   */
+  isApmeta(p) { 
+    const options = require('../configuration/options.json');
+    return require('path').basename(p).endsWith(options.apmetaFormat.path.ext); 
+  },
+
+  /**
    * Generate folder ID for APMETA.CSV files
    * @requires crypto
    * @returns  {String} A 9-byte, 18-char ID
