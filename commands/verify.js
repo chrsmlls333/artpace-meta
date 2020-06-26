@@ -39,7 +39,6 @@ module.exports = {
 
 async function verify(argv) {
   const source = path.resolve(argv.source);
-  console.log(`Verify: ${source}`);
 
   try {
     if (!fs.existsSync(source)) throw new Error('The file/directory doesn\'t exist!');
@@ -66,6 +65,15 @@ async function scanDir(dirpath) {
 }
 
 async function processApmeta(filepath) {
+  console.log(`Verify: ${filepath}`);
+
+  // Alignment of logging
+  const logTab = [
+    'Error parsing CSV: ',
+    'File does not exist: ',
+    'Not precalculated: ',
+    'Hashes did not match: ',
+  ].reduce((prev, curr) => Math.max(prev.length || 0, curr.length));
   
   // Load CSV and Filter
   const parseFile = () => new Promise((resolve, reject) => {
@@ -75,21 +83,35 @@ async function processApmeta(filepath) {
       .on('data', row => data.push(row))
       .on('end', () => resolve(data));
   });
-  const entries = await parseFile()
+  let entries = await parseFile()
     .then(a => a.filter(entry => !!entry.digitalObjectPath))
     .catch(err => console.error(`Error parsing CSV: ${err.message}`));
-
+  const totalDigitalObjects = entries.length;
   if (!entries || !entries.length) throw new Error('No archival descriptions with digital objects found in list!');
-  if (!entries.every(entry => !!entry.digitalObjectChecksum)) console.error('Some archival descriptions are missing precalculated checksums!');
-  
+
+  // Check for existence
+  entries = entries.filter(({ digitalObjectPath: p }) => {
+    const exists = fs.existsSync(p);
+    if (!exists) console.error(`File does not exist: `.padEnd(logTab, ' ') + path.basename(p));
+    return exists;
+  });
+
   // Verify Checksums
+  entries = entries.filter(({ digitalObjectPath: p, digitalObjectChecksum: c }) => {
+    const exists = !!c;
+    if (!exists) console.error(`Not precalculated: `.padEnd(logTab, ' ') + path.basename(p));
+    return exists;
+  });
   const checks = entries.map(
     ({ digitalObjectPath: p, digitalObjectChecksum: c }) => utils.verifyChecksum(p, c),
   );
-
   await Promise.allSettled(checks).then(results => {
-    results.filter(r => r.status === 'rejected').forEach(r => console.error(r.reason.message));
+    results.filter(r => r.status === 'rejected').forEach(r => {
+      const m = r.reason.message.split(':').map(s => s.trim());
+      console.error(`${m[0]}: `.padEnd(logTab, ' ') + m[1]);
+    });
     const passes = results.filter(r => r.status === 'fulfilled').length;
-    console.log(`${passes}/${results.length} passed checksum validation.`);
+    console.log(`${passes}/${totalDigitalObjects} passed checksum validation.`);
   });
+
 }
