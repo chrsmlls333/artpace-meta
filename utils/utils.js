@@ -44,6 +44,29 @@ const utils = {
   },
   
   /**
+   * Promise-based ShellJS exec wrapper
+   * @requires shelljs
+   * @param    {String} command       Shell command to run
+   * @returns  {Promise}              Returns Promise which 
+   *                                    resolves to shell stdout
+   *                                    rejects to shell stderr
+   */
+  exec(command) {
+    const sh = require('shelljs');
+    return new Promise((resolve, reject) => {
+      const process = sh.exec(command, { async: true, silent: true });
+      const output = []; 
+      const outputErr = [];
+      process.stdout.on('data', (data) => output.push(data));
+      process.stderr.on('data', (data) => outputErr.push(data));
+      process.on('close', (code) => {
+        if (code === 0) resolve(output.join(''));
+        else reject(outputErr.join(''));
+      });
+    });
+  },
+
+  /**
    * Promise-based ShellJS exec wrapper which runs a progress notification in the CLI
    * @requires shelljs
    * @requires cli-spinner
@@ -54,7 +77,7 @@ const utils = {
    *                                    resolves to shell stdout
    *                                    rejects to shell stderr
    */
-  longCommand(command, cliTemplate = 'Running... %s') {
+  execLong(command, cliTemplate = 'Running... %s') {
     const sh = require('shelljs');
     const { Spinner } = require('cli-spinner');
     return new Promise((resolve, reject) => {

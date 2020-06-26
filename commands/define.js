@@ -72,7 +72,6 @@ module.exports = {
  * @param {Boolean} argv.dry     Don't write apmeta.csv
  */
 async function define(argv) {
-
   const source = path.resolve(argv.source);
   const { dry, recurse } = argv;
   console.log(`${dry ? 'Taking a look at' : 'Creating Artpace Metadata Package at'}: ${source}`);
@@ -221,8 +220,7 @@ async function siegfriedScan(fileObject) {
   if (!sh.which('sf')) throw new Error('Siegfried dependency is not installed!');
 
   // Go wild
-  const basename = path.basename(fileObject.path);
-  const sfJSON = await utils.longCommand(`sf -nr -json '${fileObject.path}'`, `Siegfried ${basename}`).then(JSON.parse);
+  const sfJSON = await utils.exec(`sf -nr -json '${fileObject.path}'`).then(JSON.parse);
 
   if (!sfJSON.files.length) throw new Error('Siegfried no files...');
   const report = sfJSON.files[0];
@@ -247,8 +245,8 @@ async function mediaInfoScan(fileObject) {
 
   // Go wild
   const basename = path.basename(fileObject.path);
-  const mediainforeport = await utils.longCommand(`mediainfo '${fileObject.path}'`, `MediaInfo (1) ${basename}`);
-  const mediainfoJSON = await utils.longCommand(`mediainfo --Output=JSON '${fileObject.path}'`, `MediaInfo (2) ${basename}`).then(JSON.parse);
+  const mediainforeport = await utils.exec(`mediainfo '${fileObject.path}'`);
+  const mediainfoJSON = await utils.exec(`mediainfo --Output=JSON '${fileObject.path}'`).then(JSON.parse);
 
   return {
     ...fileObject,
