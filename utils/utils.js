@@ -118,6 +118,52 @@ const utils = {
     return !!id.match(/^[a-fA-F0-9]{18}$/);
   },
 
+  /**
+   * Get SHA256 checksum (same used in AtoM) for later verification
+   * @param   {String}          filepath 
+   * @returns {Promise<String>} 
+   */
+  getChecksum(filepath) {
+    return new Promise((resolve, reject) => {
+      const fs = require('fs');
+      if (!fs.existsSync(filepath)) throw new Error('Can\'t get checksum. The file/directory doesn\'t exist!');
+      const hash = require('crypto').createHash('sha256');
+      const input = fs.createReadStream(filepath);
+      input.on('error', reject);
+      input.on('data', (chunk) => hash.update(chunk));
+      input.on('close', () => resolve(hash.digest('hex')));
+    });
+  },
+
+  getChecksumLong(filepath, cliTemplate = 'Running... %s') {
+    const { Spinner } = require('cli-spinner');
+    const spinner = new Spinner(cliTemplate);
+    spinner.setSpinnerString(0);
+    spinner.start();
+    return utils.getChecksum(filepath)
+      .then(hash => {
+        spinner.stop(true);
+        return hash;
+      });
+  },
+
+  /**
+   * Compare a hexadecimal SHA256 checksum
+   * @param   {String}          filepath 
+   * @param   {String}          assumedHash 
+   * @returns {Promise<String>} Resolve if the strings match, 
+   *                            throw Error containing new hash otherwise
+   */
+  verifyChecksum(filepath, assumedHash) {
+    const name = require('path').basename(filepath);
+    if (!assumedHash) throw new Error(`I did not recieve a hash for '${name}'`);
+    return utils.getChecksum(filepath)
+      .then((hash) => {
+        if (hash === assumedHash) return true;
+        throw new Error(`Hashes for '${name}' did not match.`);
+      });
+  },
+
 };
 
 module.exports = utils;

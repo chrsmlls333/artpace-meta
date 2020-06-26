@@ -117,6 +117,9 @@ async function define(argv) {
   // Convert to Objects
   files = files.map(v => ({ path: v }));
 
+  // Get Checksums
+  files = await Promise.all(files.map(generateChecksum));
+
   // Run Siegfried file identification report
   files = await Promise.all(files.map(siegfriedScan));
 
@@ -191,7 +194,20 @@ async function define(argv) {
  * @property {String[]} credits         Unformatted credit mentions
  * @property {String[]} names           Standardized Authority Record (nameAccessPoints)
  * @property {String[]} subjects        Standardized Subject Entries (subjectAccessPoints)
+ * @property {String}   checksum        SHA256 Hash generated from path
  */
+
+/**
+ * Run SHA256 Checksum on file
+ * Uses same algorithm as AtoM
+ * @param   {FileObject} fileObject 
+ * @returns {FileObject}
+ */
+async function generateChecksum(fileObject) {
+  const checksum = await utils.getChecksumLong(fileObject.path, `SHA256 ${path.basename(fileObject.path)}`)
+    .catch(() => { throw new Error('Checksum couldn\'t be created!'); });
+  return { ...fileObject, checksum };
+}
 
 /**
  * Run Siegfried Scan on file
@@ -479,6 +495,7 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
     // publicationNote: '',
     digitalObjectPath: f.path || '',
     digitalObjectURI: '',
+    digitalObjectChecksum: f.checksum || '',
     generalNote: f.mediainforeport || '',
     subjectAccessPoints: f.subjects.join('|') || '',
     placeAccessPoints: '',
@@ -556,6 +573,7 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
     // publicationNote: '',
     digitalObjectPath: '',
     digitalObjectURI: '',
+    digitalObjectChecksum: '',
     generalNote: '',
     subjectAccessPoints: [...new Set(isadEntries.map(v => v.subjectAccessPoints))].join('|') || '',
     placeAccessPoints: [...new Set(isadEntries.map(v => v.placeAccessPoints))].join('|') || '',

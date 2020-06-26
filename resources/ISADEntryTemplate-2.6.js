@@ -36,6 +36,7 @@ const ISADEntryTemplate = module.exports = {
   publicationNote: '',
   digitalObjectPath: '',
   digitalObjectURI: '',
+  digitalObjectChecksum: '',
   generalNote: '',
   subjectAccessPoints: '',
   placeAccessPoints: '',
