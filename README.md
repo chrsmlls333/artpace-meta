@@ -6,7 +6,8 @@
 - `brew install mediainfo`
 - `brew install richardlehane/digipres/siegfried `
 - `npm install`
-- `npm link` registers the command `artpace-meta` to the system
+- `npm link` 
+  - registers the command `artpace-meta` to the system
 
 ### Commands
 - `artpace-meta --help`
