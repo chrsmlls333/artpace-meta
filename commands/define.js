@@ -77,6 +77,9 @@ async function define(argv) {
   const { dry, recurse } = argv;
   console.log(`${dry ? 'Taking a look at' : 'Creating Artpace Metadata Package at'}: ${source}`);
   
+  // Check if exists
+  if (!fs.existsSync(source)) throw new Error('The file/directory doesn\'t exist!');
+
   // Check for directory
   const isDirectory = await fsp.stat(source)
     .then((stat) => stat.isDirectory());
