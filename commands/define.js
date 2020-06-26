@@ -59,7 +59,10 @@ module.exports = {
     },
   },
 
-  handler: define,
+  handler: (argv) => define(argv).catch(e => {
+    console.error(e.message);
+    process.exitCode = 1;
+  }),
 };
 
 // ==================================================
@@ -94,6 +97,7 @@ async function define(argv) {
       throw new Error(`Unable to scan directory: ${err}`);
     });
   if (!recurse) files = files.filter((v) => !fs.statSync(v).isDirectory());
+  if (!files || !files.length) throw new Error('There are no valid files here!');
 
   // Find previous APMETA or create new ID
   utils.stepNotify(`Initialize Job...`);
@@ -173,8 +177,7 @@ async function define(argv) {
   // Write Debug CSV
   if (defineOptions.writeLocalOutputCopy) {
     utils.stepNotify(`Writing ${options.apmetaFormat.path.ext} to logs...`);
-    await fsp.writeFile(path.resolve(__dirname, '..', options.logsDirectory, `./last-output-ISAD${options.apmetaFormat.path.ext}`), csvData)
-      .catch(err => console.error(err.message));
+    await fsp.writeFile(path.resolve(__dirname, '..', options.logsDirectory, `./last-output-ISAD${options.apmetaFormat.path.ext}`), csvData);
   }
 
   // Write Source CSV
