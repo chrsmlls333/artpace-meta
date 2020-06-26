@@ -32,7 +32,7 @@ module.exports = {
     },
   },
 
-  handler: verify,
+  handler: (argv) => verify(argv).catch(e => console.error(e.message)),
 };
 
 // ===============================================
