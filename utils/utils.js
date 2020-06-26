@@ -168,11 +168,11 @@ const utils = {
    */
   verifyChecksum(filepath, assumedHash) {
     const name = require('path').basename(filepath);
-    if (!assumedHash) throw new Error(`I did not recieve a hash for '${name}'`);
+    if (!assumedHash) throw new Error(`I did not recieve a hash for ${name}`);
     return utils.getChecksum(filepath)
       .then((hash) => {
         if (hash === assumedHash) return true;
-        throw new Error(`Hashes for '${name}' did not match.`);
+        throw new Error(`Hashes did not match: ${name}`);
       });
   },
 
