@@ -103,13 +103,19 @@ const utils = {
   /**
    * Check if a file is an Artpace Metafile
    * @requires path
+   * @requires fs
    * @param    {String}  p   File path
    * @returns  {Boolean}     Whether the file is an apmeta.csv file
-   * @todo                   Add fs.exists, file checking, and csv validation to certify
+   * @todo                   Add csv validation to certify
    */
   isApmeta(p) { 
+    const fs = require('fs');
+    const path = require('path');
     const options = require('../configuration/options.json');
-    return require('path').basename(p).endsWith(options.apmetaFormat.path.ext); 
+
+    if (!fs.existsSync(p)) return false;
+    if (!fs.statSync(p).isFile()) return false;
+    return path.basename(p).endsWith(options.apmetaFormat.path.ext); 
   },
 
   /**
