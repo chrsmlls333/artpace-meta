@@ -217,7 +217,7 @@ async function define(argv) {
  * @returns {FileObject}
  */
 async function generateChecksum(fileObject) {
-  const checksum = await utils.getChecksumLong(fileObject.path, `SHA256 ${path.basename(fileObject.path)}`)
+  const checksum = await utils.getChecksum(fileObject.path)
     .catch(() => { throw new Error('Checksum couldn\'t be created!'); });
   return { ...fileObject, checksum };
 }
