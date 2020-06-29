@@ -44,12 +44,29 @@ const utils = {
   },
   
   /**
+   * Break command into pieces for child_process
+   * https://stackoverflow.com/questions/4031900/split-a-string-by-whitespace-keeping-quoted-segments-allowing-escaped-quotes
+   * @param   {String}  s 
+   * @returns {String}
+   */
+  tokenizeCommand(s) {
+    return s
+      .match(/\\?.|^$/g)
+      .reduce((p, c) => {
+        if (c === '"') p.quote ^= 1; // eslint-disable-line no-bitwise, no-param-reassign
+        else if (!p.quote && c === ' ') p.a.push('');
+        else p.a[p.a.length - 1] += c.replace(/\\(.)/, '$1'); // eslint-disable-line no-param-reassign
+        return p;
+      }, { a: [''] })
+      .a;
+  },
+  
+  /**
    * Promise-based ShellJS exec wrapper
    * @requires shelljs
    * @param    {String} command       Shell command to run
-   * @returns  {Promise}              Returns Promise which 
-   *                                    resolves to shell stdout
-   *                                    rejects to shell stderr
+   * @returns  {Promise}              Resolves to shell stdout
+   *                                  Rejects to shell stderr
    */
   exec(command) {
     const sh = require('shelljs');
@@ -64,6 +81,21 @@ const utils = {
         else reject(outputErr.join(''));
       });
     });
+  },
+
+  /**
+   * Exec wrapper for Child_Process detached spawn
+   * @requires child_process
+   * @param    {String}  command 
+   */
+  execDetached(command) {
+    const { spawn } = require('child_process');
+    const [cmd, ...args] = utils.tokenizeCommand(command);
+    const subprocess = spawn(cmd, args, {
+      detached: true,
+      stdio: 'ignore',
+    });
+    subprocess.unref();
   },
 
   /**
