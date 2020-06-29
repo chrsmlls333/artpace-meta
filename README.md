@@ -14,6 +14,7 @@
 - `artpace-meta define [source]` 
 
 ### Build Automator Shortcuts
+There is an applescript file in `/automator` which can be used in a Run Applescript block and exported to an app. this app will accept dropped folders to pass directly into `artpace define -o`
 
 ### Links 
 - [Artefactual AtoM Documentation (2.5)](https://www.accesstomemory.org/en/docs/2.5/)
