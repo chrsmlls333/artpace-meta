@@ -154,6 +154,47 @@ const utils = {
   },
 
   /**
+   * General utility used in multiple commands to return the apmeta.csv file
+   * Checks file or folder path for validity
+   * @requires path
+   * @requires fs
+   * @param    {String}   filepath  Candidate directory/file path
+   * @returns  {Promise}            Resolves to the apmeta.csv file path
+   *                                Rejects Error with reason for failure
+   */
+  async findApmeta(filepath) {
+    const fs = require('fs');
+    const path = require('path');
+
+    function scanDir(dirpath) {
+      return fs.promises.readdir(dirpath)
+        .then(list => list.map(f => path.join(dirpath, f)))
+        .catch(err => {
+          throw new Error(`Unable to scan directory: ${err.message}`);
+        })
+        .then(list => list.filter((v) => !fs.statSync(v).isDirectory()))
+        .then(list => list.filter(utils.isApmeta))
+        .then(list => {
+          if (list.length === 0) throw new Error('I don\'t see a valid apmeta.csv here!');
+          if (list.length > 1) {
+            throw new Error(
+              `I found multiple apmeta.csv files,
+              ${list.map(f => `\t${path.basename(f)}`).join('\n')}
+              Try again once resolved.`,
+            );
+          }
+          return list[0];
+        });
+    }
+
+    if (!fs.existsSync(filepath)) throw new Error('The file/directory doesn\'t exist!');
+    if (fs.statSync(filepath).isDirectory()) return scanDir(filepath);
+    if (!fs.statSync(filepath).isFile()) throw new Error('I don\'t know what you gave me but it isn\'t a file or folder!');
+    if (!utils.isApmeta(filepath)) throw new Error('This is not a valid apmeta.csv file.');
+    return filepath;
+  },
+
+  /**
    * Generate folder ID for APMETA.CSV files
    * @requires crypto
    * @returns  {String} A 9-byte, 18-char ID

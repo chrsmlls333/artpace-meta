@@ -8,7 +8,7 @@
 
 const path = require('path');
 const fs = require('fs');
-const fsp = fs.promises;
+// const fsp = fs.promises;
 
 const csv = require('fast-csv');
 
@@ -32,36 +32,21 @@ module.exports = {
     },
   },
 
-  handler: (argv) => verify(argv).catch(e => console.error(e.message)),
+  handler: (argv) => sanitize(argv).catch(e => console.error(e.message)),
 };
 
 // ===============================================
 
-async function verify(argv) {
-  const source = path.resolve(argv.source);
+async function sanitize(argv) {
+  let source = '';
+  // Handle use as a utility function
+  if (typeof argv === 'string' || argv instanceof String) source = argv;
+  // Handle as Yargs command
+  else source = argv.source;
+  source = path.resolve(source);
 
-  try {
-    if (!fs.existsSync(source)) throw new Error('The file/directory doesn\'t exist!');
-    if (fs.statSync(source).isDirectory()) await scanDir(source);
-    else {
-      if (!fs.statSync(source).isFile()) throw new Error('I don\'t know what you gave me but it isn\'t a file or folder!');
-      if (!utils.isApmeta(source)) throw new Error('This is not a valid apmeta.csv file.');
-      await processApmeta(source);
-    }
-  } catch (error) { console.error(error.message); }
-}
-
-async function scanDir(dirpath) {
-  const files = await fsp.readdir(dirpath)
-    .then(list => list.map(f => path.join(dirpath, f)))
-    .then(list => list.filter((v) => !fs.statSync(v).isDirectory()))
-    .then(list => list.filter(utils.isApmeta))
-    .catch(err => {
-      throw new Error(`Unable to scan directory: ${err}`);
-    });
-  if (files.length === 0) throw new Error('I don\'t see a valid apmeta.csv here!');
-  if (files.length > 1) throw new Error(`I found multiple apmeta.csv files,\n${files.map(f => `\t${path.basename(f)}`).join('\n')}\nTry again once resolved.`);
-  await processApmeta(files[0]);
+  utils.findApmeta(source)
+    .then(filepath => processApmeta(filepath));
 }
 
 async function processApmeta(filepath) {
