@@ -29,6 +29,8 @@ const ISADEntryTemplate = require('../resources/ISADEntryTemplate-2.6');
 const options = require('../configuration/options.json');
 const defineOptions = options.commands.define;
 
+const inspectCommand = require('./inspect').handler;
+
 // ==================================================
 
 module.exports = {
@@ -59,6 +61,12 @@ module.exports = {
       hidden: true,
       choices: [false], // Force false, not implemented
     },
+    inspect: {
+      describe: 'Open the metafile after creation.',
+      alias: ['i'],
+      type: 'boolean',
+      default: false,
+    },
   },
 
   handler: (argv) => define(argv).catch(e => {
@@ -75,10 +83,12 @@ module.exports = {
  * @param {Object}  argv         Yargs Arguments Variable
  * @param {String}  argv.source  Working Directory
  * @param {Boolean} argv.dry     Don't write apmeta.csv
+ * @param {Boolean} argv.recurse
+ * @param {Boolean} argv.inspect
  */
 async function define(argv) {
   const source = path.resolve(argv.source);
-  const { dry, recurse } = argv;
+  const { dry, recurse, inspect } = argv;
   console.log(`${dry ? 'Taking a look at' : 'Creating Artpace Metadata Package at'}: ${source}`);
   
   // Check if exists
@@ -185,12 +195,15 @@ async function define(argv) {
   // Write Source CSV
   if (!dry) {
     utils.stepNotify(`Writing ${options.apmetaFormat.path.ext} to source...`);
-    await fsp.writeFile(path.resolve(source, `${folderID}${options.apmetaFormat.path.ext}`), csvData)
-      .catch(err => console.error(err.message));
+    const csvPath = path.resolve(source, `${folderID}${options.apmetaFormat.path.ext}`);
+    await fsp.writeFile(csvPath, csvData)
+      .then(() => { 
+        if (inspect) {
+          utils.stepNotify(`Opening for inspection: ${path.basename(csvPath)}`);
+          inspectCommand(csvPath);
+        } 
+      });
   }
-
-  // Open
-  // sh.exec(`open '${source}'`);
 }
 
 // STEPS ==========================================================
