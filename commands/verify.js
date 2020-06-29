@@ -32,7 +32,10 @@ module.exports = {
     },
   },
 
-  handler: (argv) => sanitize(argv).catch(e => console.error(e.message)),
+  handler: (argv) => sanitize(argv).catch(e => {
+    console.error(e.message);
+    process.exitCode = 1;
+  }),
 };
 
 // ===============================================
@@ -45,6 +48,7 @@ async function sanitize(argv) {
   else source = argv.source;
   source = path.resolve(source);
 
+  // Route through standardized detection
   utils.findApmeta(source)
     .then(filepath => processApmeta(filepath));
 }
@@ -70,7 +74,7 @@ async function processApmeta(filepath) {
   });
   let entries = await parseFile()
     .then(a => a.filter(entry => !!entry.digitalObjectPath))
-    .catch(err => console.error(`Error parsing CSV: ${err.message}`));
+    .catch(err => { throw new Error(`Error parsing CSV: ${err.message}`); });
   const totalDigitalObjects = entries.length;
   if (!entries || !entries.length) throw new Error('No archival descriptions with digital objects found in list!');
 
