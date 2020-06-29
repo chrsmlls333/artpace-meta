@@ -34,6 +34,8 @@ const defineOptions = options.commands.define;
 module.exports = {
   command: 'define [source]',
 
+  aliases: ['init', 'scan'],
+
   desc: `Initial pass to create metadata for folder contents. Sniff as many details from current directory into an '${options.apmetaFormat.path.ext}' resource file. This file follows ISAD templating for use with Access to Memory.`,
 
   builder: {
