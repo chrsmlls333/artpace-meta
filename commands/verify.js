@@ -54,7 +54,7 @@ async function sanitize(argv) {
 }
 
 async function processApmeta(filepath) {
-  console.log(`Verify: ${filepath}`);
+  console.log(`\nVerify: ${filepath}\n`);
 
   // Alignment of logging
   const logTab = [

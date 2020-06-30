@@ -89,7 +89,7 @@ module.exports = {
 async function define(argv) {
   const source = path.resolve(argv.source);
   const { dry, recurse, inspect } = argv;
-  console.log(`${dry ? 'Taking a look at' : 'Creating Artpace Metadata Package at'}: ${source}`);
+  console.log(`\n${dry ? 'Taking a look at' : 'Creating Artpace Metadata Package at'}: ${source}\n`);
   
   // Check if exists
   if (!fs.existsSync(source)) throw new Error('The file/directory doesn\'t exist!');

@@ -56,7 +56,7 @@ async function sanitize(argv) {
 }
 
 async function processApmeta(filepath) {
-  console.log(`Open: ${filepath}`);
+  console.log(`\nOpen: ${filepath}\n`);
 
   // Open CSV
   openLibreOffice(filepath);
