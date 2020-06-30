@@ -14,6 +14,8 @@ SIZES="
 1024,512x512@2x
 "
 
+[ "$(uname)" == "Darwin" ] || { echo "This only builds on macOS!" ; exit 1; }
+
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd $DIR
 
@@ -31,6 +33,8 @@ for i in *-applet.js; do
   osacompile -l JavaScript -o "$APP" "$JS"
 
   # Build Icons
+  [ -x "$(command -v svg2png)" ] || { echo "svg2png dependency missing!"; break; }
+  
   SVG="$BASE.svg"
   [ -f "$SVG" ] || { echo "No SVG found."; break; }
 
