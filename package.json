@@ -4,8 +4,9 @@
   "description": "A metadata sidecar generator for the Artpace Archive Server",
   "main": "artpace-meta-cli.js",
   "scripts": {
-    "define": "node . define",
-    "help": "node . --help"
+    "start": "node artpace-meta-cli.js",
+    "help": "node artpace-meta-cli.js --help",
+    "build-applets": "chmod +x ./applets/build.sh && ./applets/build.sh"
   },
   "bin": {
     "artpace-meta": "artpace-meta-cli.js"
