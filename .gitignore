@@ -2,5 +2,6 @@ node_modules
 logs/
 
 *.placeholder
+applets/*.app
 
 .DS_Store
