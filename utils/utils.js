@@ -231,18 +231,14 @@ const utils = {
    * @requires crypto
    * @returns  {String} A 9-byte, 18-char ID
    */
-  generateFolderID() {
-    return require('crypto').randomBytes(9).toString('hex');
-  },
+  generateFolderID: () => require('crypto').randomBytes(9).toString('hex'),
 
   /**
    * Verify folder ID format for APMETA.CSV files (9-byte, 18-char ID)
    * @param   {String}  id  Potential Identifier
    * @returns {Boolean}     Verification Status
    */
-  verifyFolderID(id) {
-    return !!id.match(/^[a-fA-F0-9]{18}$/);
-  },
+  verifyFolderID: (id) => !!id.match(/^[a-fA-F0-9]{18}$/),
 
   /**
    * Get SHA256 checksum (same used in AtoM) for later verification
