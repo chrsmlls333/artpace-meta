@@ -2,7 +2,7 @@
 
 ### Installation
 - Install Homebrew https://brew.sh/
-- `brew install node`
+- `brew install node@14`
 - `brew install mediainfo`
 - `brew install richardlehane/digipres/siegfried `
 - `npm install`
