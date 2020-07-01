@@ -57,4 +57,3 @@ for i in *-applet.js; do
   rm -rf "$ICONSET"
   rm -f "$ICNS"
 done
-

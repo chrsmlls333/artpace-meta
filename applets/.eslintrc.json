@@ -1,0 +1,18 @@
+{
+	"root": true,
+	"extends": "es5",
+	"env": {
+		"applescript": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 5,
+		"sourceType": "script"
+	},
+	"rules": {
+		"no-unused-vars": "off",
+		"no-use-before-define": "off",
+		"new-cap": "off",
+		"func-names": "off"
+	}
+
+}
