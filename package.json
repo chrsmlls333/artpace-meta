@@ -1,6 +1,6 @@
 {
   "name": "artpace-meta",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A metadata sidecar generator for the Artpace Archive Server",
   "main": "artpace-meta-cli.js",
   "scripts": {
