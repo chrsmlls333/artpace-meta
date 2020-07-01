@@ -24,7 +24,7 @@ Steps:
 
 Current Builds:
 - `Artpace-Meta Define.app`
-  - This app will accept dropped folders to pass directly into `artpace define --inspect` before opening the csv in LibreOffice and the folder in Finder.
+  - This app will accept dropped folders to pass directly into `artpace-meta define --inspect` before opening the csv in LibreOffice and the folder in Finder.
 
   - If many Terminal windows build up, make sure:
     - Preferences > Profiles > Shell > When the shell exits: === "Close if the shell exited cleanly"
@@ -36,5 +36,9 @@ Current Builds:
 - https://www.itforarchivists.com/siegfried
   - https://github.com/richardlehane/siegfried
   - http://www.nationalarchives.gov.uk/PRONOM
-- https://glench.github.io/fuzzyset.js/
-- https://zaiste.net/posts/modern-nodejs-cli-yargs/
+- Node Libraries
+  - https://glench.github.io/fuzzyset.js/
+  - https://zaiste.net/posts/modern-nodejs-cli-yargs/
+- JXA/Applescript
+  - https://github.com/JXA-Cookbook/JXA-Cookbook/wiki
+  - https://github.com/addyosmani/es6-equivalents-in-es5#iterators-and-for-of
