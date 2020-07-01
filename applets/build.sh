@@ -32,12 +32,12 @@ for i in *-applet.js; do
   rm -rf "$APP"
   osacompile -l JavaScript -o "$APP" "$JS"
 
-  # Build Icons
+  # Check before next step
   [ -x "$(command -v svg2png)" ] || { echo "svg2png dependency missing!"; break; }
   
+  # Build Icons
   SVG="$BASE.svg"
   [ -f "$SVG" ] || { echo "No SVG found."; break; }
-
   ICONSET="$BASE.iconset"
   mkdir -p "$ICONSET"
   for PARAMS in $SIZES; do
@@ -47,6 +47,8 @@ for i in *-applet.js; do
   done
   iconutil -c icns "$ICONSET"
   ICNS="$BASE.icns"
+  
+  # Implant Icons in App
   ORIG_ICNS=$(ls "$APP/Contents/Resources" | grep -m 1 .icns)
   cp "$ICNS" "$APP/Contents/Resources/$ORIG_ICNS"
   touch "$APP" # Resets icon cache
