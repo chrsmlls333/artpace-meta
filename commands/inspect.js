@@ -3,8 +3,6 @@
  * @description Yargs command module to open APMETA package for inspection
  */
 
-/* eslint-disable no-use-before-define */
-
 // ===========================================
 
 const path = require('path');

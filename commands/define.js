@@ -3,8 +3,6 @@
  * @description Yargs command module to build APMETA package/notation
  */
 
-/* eslint-disable no-nested-ternary, no-use-before-define */
-
 // ==================================================
 
 const path = require('path');
@@ -22,9 +20,9 @@ const csv = require('fast-csv');
 
 const utils = require('../utils/utils');
 utils.loadArtists = require('../utils/loadArtists');
-String.prototype.breakCamelCase = utils.breakCamelCase;
+String.prototype.breakCamelCase = utils.breakCamelCase; // eslint-disable-line no-extend-native
 
-const ISADEntryTemplate = require('../resources/ISADEntryTemplate-2.6');
+// const ISADEntryTemplate = require('../resources/ISADEntryTemplate-2.6');
 
 const options = require('../configuration/options.json');
 const defineOptions = options.commands.define;
@@ -197,11 +195,11 @@ async function define(argv) {
     utils.stepNotify(`Writing ${options.apmetaFormat.path.ext} to source...`);
     const csvPath = path.resolve(source, `${folderID}${options.apmetaFormat.path.ext}`);
     await fsp.writeFile(csvPath, csvData)
-      .then(() => { 
+      .then(() => {
         if (inspect) {
           utils.stepNotify(`Opening for inspection: ${path.basename(csvPath)}`);
           inspectCommand(csvPath);
-        } 
+        }
       });
   }
 }
@@ -258,7 +256,7 @@ async function siegfriedScan(fileObject) {
 
   const match = report.matches[0];
 
-  return { ...fileObject, sf: match };  
+  return { ...fileObject, sf: match };
 }
 
 /**
@@ -316,15 +314,15 @@ async function exifTagScan(fileObject) {
         'description',
         'Object Name',
         'Copyright Notice',
-        'ImageDescription', 
-        'Caption/Abstract', 
+        'ImageDescription',
+        'Caption/Abstract',
       ].forEach(t => {
         const value = exif[t] && exif[t].description;
         if (value) tags.set(t, value);
       });
       return { ...fileObject, tags };
     })
-    .catch((err) => {
+    .catch((_err) => {
       console.error(`Exif parsing failed for ${path.basename(fileObject.path)}`);
       // console.error(err);
       return fileObject;
@@ -363,18 +361,18 @@ function detectDates(fileObject) {
   const mdy4Results = n.match(/(?<month>\d{1,2})[-.](?<day>\d{1,2})[-.](?<year>\d{4})/);
   const mdy2Results = n.match(/(?<month>\d{1,2})[-.](?<day>\d{1,2})[-.](?<year>\d{2})[^\d]/);
   const y4dmResults = n.match(/(?<year>\d{4})[-.](?<month>\d{1,2})[-.](?<day>\d{1,2})/);
-  const r = { 
-    ...mdy4Results && mdy4Results.groups, 
-    ...mdy2Results && mdy2Results.groups, 
+  const r = {
+    ...mdy4Results && mdy4Results.groups,
+    ...mdy2Results && mdy2Results.groups,
     ...y4dmResults && y4dmResults.groups,
   };
   if (r.year && r.year.length === 2) r.year = (Number(r.year) >= 90 ? '19' : '20') + r.year;
-  const filenameDateStr = r.year ? 
-    r.month ? 
-      r.day ? 
-        `${r.year}-${r.month.padStart(2, '0')}-${r.day.padStart(2, '0')}` : 
-        `${r.year}-${r.month.padStart(2, '0')}` : 
-      r.year : 
+  const filenameDateStr = r.year ?
+    r.month ?
+      r.day ?
+        `${r.year}-${r.month.padStart(2, '0')}-${r.day.padStart(2, '0')}` :
+        `${r.year}-${r.month.padStart(2, '0')}` :
+      r.year :
     false;
   if (filenameDateStr && filenameDateStr !== modifiedDateStr) {
     dates.push({
@@ -464,8 +462,8 @@ function tagPathTokens(fileObject, dirPath = path.dirname(fileObject.path)) {
     .filter(t => t !== 'Volumes')
     .filter(t => t !== 'Archive')
     .map(s => s.trim())
-    .forEach((v, i) => { 
-      tags.set(`path[${i}]`, v); 
+    .forEach((v, i) => {
+      tags.set(`path[${i}]`, v);
     });
 
   return { ...fileObject, tags };
@@ -482,10 +480,10 @@ function tagPathTokens(fileObject, dirPath = path.dirname(fileObject.path)) {
  * Build AtoM ISAD(G) CSV-line Objects for each FileObject
  * @param   {FileObject}   fileObject 
  * @param   {Number}       i                index in alpha-sorted fileObjectArray
- * @param   {FileObject[]} fileObjectArray 
+ * @param   {FileObject[]} _fileObjectArray 
  * @returns {ISADEntry}   
  */
-function isadFileFormatter(fileObject, i, fileObjectArray) {
+function isadFileFormatter(fileObject, i, _fileObjectArray) {
   const f = fileObject;
   const isadEntry = {
     // ...isadEntryTemplate,
@@ -499,7 +497,7 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
       .breakCamelCase(),
     levelOfDescription: 'Item',
     extentAndMedium: (() => {
-      const [type, subtype] = f.sf.mime.split('/');
+      const [type, _subtype] = f.sf.mime.split('/');
       return `1 ${type && type !== 'application' ? `${type} file` : 'digital object'}${f.sf.format ? ` (${f.sf.format})` : ''}`;
     })(),
     // repository: '',
@@ -511,7 +509,7 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
     // arrangement: '',
     accessConditions: '',
     reproductionConditions: f.credits.join(' & ') || '',
-    language: 'en', 
+    language: 'en',
     // script: '',
     // languageNote: '',
     physicalCharacteristics: '',
@@ -589,7 +587,7 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
     // arrangement: '',
     accessConditions: utils.allEqual(isadEntries.map(v => v.accessConditions)),
     reproductionConditions: utils.allEqual(isadEntries.map(v => v.reproductionConditions)),
-    language: 'en', 
+    language: 'en',
     // script: '',
     // languageNote: '',
     physicalCharacteristics: '',

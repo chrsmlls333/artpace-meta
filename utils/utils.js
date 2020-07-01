@@ -17,7 +17,7 @@ const utils = {
   /**
    * Promise-based delay function, passes through resolve function in promise-chain.
    * @param   {Number}  ms  Milliseconds to wait
-   * @returns {Promise} 
+   * @returns {Promise}
    */
   sleep: (ms) => new Promise(resolve => setTimeout(resolve, ms)),
 
@@ -46,7 +46,7 @@ const utils = {
   /**
    * Break command into pieces for child_process
    * https://stackoverflow.com/questions/4031900/split-a-string-by-whitespace-keeping-quoted-segments-allowing-escaped-quotes
-   * @param   {String}  s 
+   * @param   {String}  s
    * @returns {String}
    */
   tokenizeCommand(s) {
@@ -60,7 +60,7 @@ const utils = {
       }, { a: [''] })
       .a;
   },
-  
+
   /**
    * Promise-based ShellJS exec wrapper
    * @requires shelljs
@@ -72,7 +72,7 @@ const utils = {
     const sh = require('shelljs');
     return new Promise((resolve, reject) => {
       const process = sh.exec(command, { async: true, silent: true });
-      const output = []; 
+      const output = [];
       const outputErr = [];
       process.stdout.on('data', (data) => output.push(data));
       process.stderr.on('data', (data) => outputErr.push(data));
@@ -86,7 +86,7 @@ const utils = {
   /**
    * Exec wrapper for Child_Process detached spawn
    * @requires child_process
-   * @param    {String}  command 
+   * @param    {String}  command
    */
   execDetached(command) {
     const { spawn } = require('child_process');
@@ -103,9 +103,9 @@ const utils = {
    * @requires shelljs
    * @requires cli-spinner
    * @param    {String} command       Shell command to run
-   * @param    {String} [cliTemplate] Text to display in the console while running, 
+   * @param    {String} [cliTemplate] Text to display in the console while running,
    *                                    with %s to represent spinner
-   * @returns  {Promise}              Returns Promise which 
+   * @returns  {Promise}              Returns Promise which
    *                                    resolves to shell stdout
    *                                    rejects to shell stderr
    */
@@ -118,7 +118,7 @@ const utils = {
       spinner.setSpinnerString(0);
       spinner.start();
       const process = sh.exec(command, { async: true, silent: true });
-      const output = []; 
+      const output = [];
       const outputErr = [];
       process.stdout.on('data', (data) => output.push(data));
       process.stderr.on('data', (data) => outputErr.push(data));
@@ -138,13 +138,13 @@ const utils = {
    * @returns {String}
    */
   humanFileSize(bytes, si = false, dp = 1) {
-    let b = bytes; 
+    let b = bytes;
     const thresh = si ? 1000 : 1024;
     if (Math.abs(b) < thresh) {
       return `${b} B`;
     }
-    const units = si ? 
-      ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'] : 
+    const units = si ?
+      ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'] :
       ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
     let u = -1;
     const r = 10 ** dp;
@@ -175,14 +175,14 @@ const utils = {
    * @returns  {Boolean}     Whether the file is an apmeta.csv file
    * @todo                   Add csv validation to certify
    */
-  isApmeta(p) { 
+  isApmeta(p) {
     const fs = require('fs');
     const path = require('path');
     const options = require('../configuration/options.json');
 
     if (!fs.existsSync(p)) return false;
     if (!fs.statSync(p).isFile()) return false;
-    return path.basename(p).endsWith(options.apmetaFormat.path.ext); 
+    return path.basename(p).endsWith(options.apmetaFormat.path.ext);
   },
 
   /**
@@ -242,8 +242,8 @@ const utils = {
 
   /**
    * Get SHA256 checksum (same used in AtoM) for later verification
-   * @param   {String}          filepath 
-   * @returns {Promise<String>} 
+   * @param   {String}          filepath
+   * @returns {Promise<String>}
    */
   getChecksum(filepath) {
     return new Promise((resolve, reject) => {
@@ -271,9 +271,9 @@ const utils = {
 
   /**
    * Compare a hexadecimal SHA256 checksum
-   * @param   {String}          filepath 
-   * @param   {String}          assumedHash 
-   * @returns {Promise<String>} Resolve if the strings match, 
+   * @param   {String}          filepath
+   * @param   {String}          assumedHash
+   * @returns {Promise<String>} Resolve if the strings match,
    *                            throw Error containing new hash otherwise
    */
   verifyChecksum(filepath, assumedHash) {

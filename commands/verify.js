@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 /**
  * @module commands/verify
  * @description Yargs command module to verify checksums in APMETA package/notation
@@ -102,5 +101,4 @@ async function processApmeta(filepath) {
     const passes = results.filter(r => r.status === 'fulfilled').length;
     console.log(`${passes}/${totalDigitalObjects} passed checksum validation.`);
   });
-
 }

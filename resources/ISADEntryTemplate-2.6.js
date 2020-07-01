@@ -17,7 +17,7 @@ const ISADEntryTemplate = module.exports = {
   levelOfDescription: '', // Item
   extentAndMedium: '',
   repository: '', // Only link at highest levels
-  archivalHistory: '', 
+  archivalHistory: '',
   acquisition: '',
   scopeAndContent: '',
   appraisal: '',

@@ -3,8 +3,6 @@
  * @description Pulls in the AtoM Authority Record CSV to create an Artist List for tagging
  */
 
-/* eslint-disable no-multi-assign, no-unused-vars */
-
 const path = require('path');
 const csv = require('fast-csv');
 
@@ -12,7 +10,7 @@ const { artistsAtomTemplateCSV } = require('../configuration/options.json').reso
 
 // ========================================================================================
 
-const artistList = module.exports = () => new Promise((resolve, reject) => {
+module.exports = () => new Promise((resolve, reject) => {
   const file = path.resolve(__dirname, '..', artistsAtomTemplateCSV);
   const data = [];
   csv.parseFile(file, {
@@ -20,11 +18,11 @@ const artistList = module.exports = () => new Promise((resolve, reject) => {
     encoding: 'utf8',
   })
     .on('data', record => {
-      const filtered = (({ 
-        authorizedFormOfName, 
+      const filtered = (({
+        authorizedFormOfName,
         subjectAccessPoints,
-      }) => ({ 
-        authorizedFormOfName, 
+      }) => ({
+        authorizedFormOfName,
         subjectAccessPoints: (subjectAccessPoints && subjectAccessPoints.split('|')) || [],
       }))(record);
       data.push(filtered);
