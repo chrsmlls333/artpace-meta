@@ -5,3 +5,4 @@ logs/
 applets/*.app
 
 .DS_Store
+.~lock*
