@@ -36,7 +36,7 @@
       "executable": "/Applications/LibreOffice.app/Contents/MacOS/soffice",
       "args": [
         "--calc",
-        "--infilter='CSV:44,34,76,1,,1033,true'"
+        "--infilter='CSV:44,34,76,1,,1033,true,true'"
       ]
     }
   }
