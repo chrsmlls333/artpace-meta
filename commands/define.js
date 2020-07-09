@@ -425,7 +425,7 @@ function detectCreditsInPathAndTags(fileObject) {
  * @returns  {FileObject} 
  */
 function findArtistMentions(fileObject, artists, fuzzy) {
-  const names = fileObject.names || [];
+  let names = fileObject.names || [];
   const subjects = fileObject.subjects || [];
 
   // Get Artists
@@ -439,6 +439,10 @@ function findArtistMentions(fileObject, artists, fuzzy) {
       names.push(...match.map(e => e[1]));
       // if (match.length) console.log(s, match);
     });
+  
+  // Dedupe names 
+  names = [...new Set(names)];
+
   // Get Corresponding Subjects
   names.forEach(n => {
     const match = artists.find(a => a.authorizedFormOfName === n);
