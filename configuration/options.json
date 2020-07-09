@@ -11,7 +11,7 @@
   
   "resources": {
     "logsDirectory": "./logs/",
-    "artistsAtomTemplateCSV": "./resources/AtomAuthorityRecordsCSV_2020.06.05.csv"
+    "artistsAtomTemplateCSV": "./resources/NewAtomAuthorityRecords_07.02.20_CMills&CHunger_FINAL.csv"
   },
 
   "apmetaFormat": {
