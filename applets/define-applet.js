@@ -29,6 +29,8 @@ var SystemEvents = Application('System Events');
 var fileManager = $.NSFileManager.defaultManager;
 var app = Application.currentApplication();
 app.includeStandardAdditions = true;
+// var computerName = app.doShellScript('scutil --get LocalHostName');
+// var userName = app.doShellScript('echo $USER');
 
 function run() {
   openDocuments([app.chooseFolder({
@@ -60,6 +62,9 @@ function openFolder(folder) {
   var cmd = [].concat(cmdstart, ['"' + folder.toString() + '"'], cmdend).join(' ');
 
   var t = Terminal.doScript(cmd);
+  // do {
+  //   delay(1);
+  // } while (t.properties().busy);
 }
 
 function debug(any) {
@@ -93,5 +98,20 @@ function debug(any) {
 //   var typeIdentifier = alias.typeIdentifier();
 //   if (fileTypesToProcess.includes(fileType) || extensionsToProcess.includes(extension) || typeIdentifiersToProcess.includes(typeIdentifier)) {
 //     // Add file processing code here
+//   }
+// }
+
+// function commandExistWindow(command) {
+//   var Terminal = Application('Terminal');
+//   Terminal.activate();
+//   try {
+//     var currentWindow = Terminal.windows.at(0);
+//     var currentTab = currentWindow.selectedTab();
+//     var t = Terminal.doScript(command, { in: currentTab });
+//     return t;
+//   } catch (err) {
+//     // console.log(err) // no window
+//     var g = Terminal.doScript(command);
+//     return g;
 //   }
 // }
