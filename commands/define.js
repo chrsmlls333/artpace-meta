@@ -272,8 +272,8 @@ async function mediaInfoScan(fileObject) {
 
   // Go wild
   const basename = path.basename(fileObject.path);
-  const mediainforeport = await utils.exec(`mediainfo '${fileObject.path}'`);
-  const mediainfoJSON = await utils.exec(`mediainfo --Output=JSON '${fileObject.path}'`).then(JSON.parse);
+  const mediainforeport = await utils.exec(`mediainfo --File_TestContinuousFileNames=0 '${fileObject.path}'`);
+  const mediainfoJSON = await utils.exec(`mediainfo --Output=JSON --File_TestContinuousFileNames=0 '${fileObject.path}'`).then(JSON.parse);
 
   return {
     ...fileObject,
