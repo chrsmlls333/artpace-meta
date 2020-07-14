@@ -178,8 +178,11 @@ async function define(argv) {
     .sort((a, b) => ('' + path.parse(a.path).name) // eslint-disable-line prefer-template
       .localeCompare(path.parse(b.path).name, 'en', { numeric: true })) // Natural Sort
     .map(isadFileFormatter);
-  // Put in a File Folder
-  isad = isadContainerAddTransform(isad, source, folderID);
+  isad = isadAddFolderID(isad, folderID);
+  if (isad.length > 1) {
+    // Put in a File Folder
+    isad = isadContainerAddTransform(isad, source, folderID);
+  }
   
   // Build CSV
   const csvData = await csv.writeToString(isad, options.apmetaFormat.fastcsv.writeOptions);
@@ -484,17 +487,17 @@ function tagPathTokens(fileObject, dirPath = path.dirname(fileObject.path)) {
  * Build AtoM ISAD(G) CSV-line Objects for each FileObject
  * @param   {FileObject}   fileObject 
  * @param   {Number}       i                index in alpha-sorted fileObjectArray
- * @param   {FileObject[]} _fileObjectArray 
+ * @param   {FileObject[]} fileObjectArray 
  * @returns {ISADEntry}   
  */
-function isadFileFormatter(fileObject, i, _fileObjectArray) {
+function isadFileFormatter(fileObject, i, fileObjectArray) {
   const f = fileObject;
   const isadEntry = {
     // ...isadEntryTemplate,
     legacyId: i + 1,
     parentId: '',
     qubitParentSlug: '',
-    identifier: `${(i + 1).toString().padStart(3, '0')}`,
+    identifier: (fileObjectArray.length > 1) ? `${(i + 1).toString().padStart(3, '0')}` : '',
     // accessionNumber: '',
     title: (defineOptions.includeExtISADTitle ? path.parse(f.path).base : path.parse(f.path).name)
       .replace(/[_-]/g, ' ')
@@ -558,16 +561,38 @@ function isadFileFormatter(fileObject, i, _fileObjectArray) {
 }
 
 /**
+ * Add folder ID info for each ISAD Entry
+ * @param   {ISADEntry[]}  isadEntries
+ * @param   {String}       folderId   ID to pass into container metadata, 
+ *                                    should be generated with generateFolderID in utils
+ * @returns {ISADEntry[]}             
+ */
+function isadAddFolderID(isadEntries, folderId) {
+  if (!isadEntries.length) return isadEntries;
+  return isadEntries.map(v => ({
+    ...v,
+    alternativeIdentifiers: (() => {
+      const f = v.alternativeIdentifiers.split('|').filter(h => h !== '');
+      f.push(folderId);
+      return f.join('|');
+    })(),
+    alternativeIdentifierLabels: (() => {
+      const f = v.alternativeIdentifierLabels.split('|').filter(h => h !== '');
+      f.push('apmeta ID');
+      return f.join('|');
+    })(),
+  }));
+}
+
+/**
  * Build AtoM ISAD(G) CSV-line Object for container
  * Consolidate repeated data from items to container entry
  * @param   {ISADEntry[]}  isadEntries
  * @param   {String}       dirname    Root source filepath for working directory
- * @param   {String}       folderId   ID to pass into container metadata, 
- *                                    should be generated with generateFolderID in utils
  * @returns {ISADEntry[]}             
  *                                    All entries plus the new container entry in [0]
  */
-function isadContainerAddTransform(isadEntries, dirname, folderId) {
+function isadContainerAddTransform(isadEntries, dirname) {
   const legacyId = isadEntries.length + 1;
   const isadParentEntry = {
     // ...isadEntryTemplate,
@@ -622,13 +647,8 @@ function isadContainerAddTransform(isadEntries, dirname, folderId) {
     physicalObjectName: '',
     physicalObjectLocation: '',
     physicalObjectType: '',
-    alternativeIdentifiers: folderId,
-    alternativeIdentifierLabels: 'apmeta ID',
-    // eventDates: ,
-    // eventTypes: ,
-    // eventStartDates: ,
-    // eventEndDates: ,
-    // eventActors: ,
+    alternativeIdentifiers: '',
+    alternativeIdentifierLabels: '',
     // eventActorHistories: v.dates.map(d => d.eventActorHistories || 'NULL').join('|'),
     culture: 'en',
   };
