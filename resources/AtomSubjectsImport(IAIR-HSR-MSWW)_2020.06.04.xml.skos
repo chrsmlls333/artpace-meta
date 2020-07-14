@@ -1,0 +1,1907 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script/>
+<skos:ConceptScheme rdf:about="http://10.0.0.174/index.php/subjects">
+<skos:hasTopConcept rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+<skos:hasTopConcept rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+<skos:hasTopConcept rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:ConceptScheme>
+<skos:Concept rdf:about="https://www.artpace.org/home/exhibits/international-artist-in-residence">
+<skos:prefLabel xml:lang="en">International Artist-In-Residence</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2020"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2014"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2014"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2014"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2003"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2003"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2003"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2002"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2002"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2002"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2001"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2001"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2001"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_winter_2000"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_2000"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_2000"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_2000"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_winter_1999"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_1999"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_1999"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_1999"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_winter_1998"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_1998"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_1998"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_1998"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_winter_1997"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_1997"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_1997"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_1997"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_winter_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_winter_1995"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_fall_1995"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_summer_1995"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/iair/iair_spring_1995"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2020">
+<skos:prefLabel xml:lang="en">IAIR Spring 2020</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 20.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Jan 27, 2020 - Mar 23, 2020</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 19, 2020 - Aug 23, 2020</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2019">
+<skos:prefLabel xml:lang="en">IAIR Fall 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 19.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Sep 23, 2019 - Nov 19, 2019</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 14, 2019 - Jan 12, 2020</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2019">
+<skos:prefLabel xml:lang="en">IAIR Summer 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 19.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: May 28, 2019 - Jul 22, 2019</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 18, 2019 - Sep 08, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2019">
+<skos:prefLabel xml:lang="en">IAIR Spring 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 19.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Jan 23, 2019 - Mar 25, 2019</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 21, 2019 - May 20, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2018">
+<skos:prefLabel xml:lang="en">IAIR Fall 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 18.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Sep 12, 2018 - Nov 19, 2018</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 15, 2018 - Jan 13, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2018">
+<skos:prefLabel xml:lang="en">IAIR Summer 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 18.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: May 16, 2018 - Jul 23, 2018</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 19, 2018 - Sep 09, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2018">
+<skos:prefLabel xml:lang="en">IAIR Spring 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 18.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Jan 17, 2018 - Mar 22, 2018</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 22, 2018 - May 13, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2017">
+<skos:prefLabel xml:lang="en">IAIR Fall 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 17.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Sep 11, 2017 - Nov 13, 2017</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 09, 2017 - Dec 31, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2017">
+<skos:prefLabel xml:lang="en">IAIR Summer 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 17.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: May 15, 2017 - Jul 17, 2017</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 13, 2017 - Sep 03, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2017">
+<skos:prefLabel xml:lang="en">IAIR Spring 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 17.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Jan 17, 2017 - Mar 20, 2017</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 16, 2017 - May 07, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2016">
+<skos:prefLabel xml:lang="en">IAIR Fall 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 16.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Sep 12, 2016 - Nov 14, 2016</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 10, 2016 - Jan 10, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2016">
+<skos:prefLabel xml:lang="en">IAIR Summer 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 16.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: May 16, 2016 - Jul 18, 2016</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 14, 2016 - Sep 11, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2016">
+<skos:prefLabel xml:lang="en">IAIR Spring 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 16.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Jan 18, 2016 - Mar 21, 2016</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 17, 2016 - May 15, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2015">
+<skos:prefLabel xml:lang="en">IAIR Fall 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 15.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Sep 14, 2015 - Nov 16, 2015</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 12, 2015 - Jan 17, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2015">
+<skos:prefLabel xml:lang="en">IAIR Summer 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 15.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: May 18, 2015 - Jul 20, 2015</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 16, 2015 - Sep 13, 2015</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2015">
+<skos:prefLabel xml:lang="en">IAIR Spring 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 15.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Jan 19, 2015 - Mar 23, 2015</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 19, 2015 - May 17, 2015</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2014">
+<skos:prefLabel xml:lang="en">IAIR Fall 2014</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 14.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Sep 16, 2014 - Nov 17, 2014</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 13, 2014 - Jan 18, 2015</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2014">
+<skos:prefLabel xml:lang="en">IAIR Summer 2014</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 14.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: May 20, 2014 - Jul 14, 2014</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 10, 2014 - Sep 14, 2014</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2014">
+<skos:prefLabel xml:lang="en">IAIR Spring 2014</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 14.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Jan 21, 2014 - Mar 24, 2014</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 20, 2014 - May 18, 2014</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2013">
+<skos:prefLabel xml:lang="en">IAIR Fall 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 13.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Sep 17, 2013 - Nov 18, 2013</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 14, 2013 - Jan 12, 2014</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2013">
+<skos:prefLabel xml:lang="en">IAIR Summer 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 13.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: May 21, 2013 - Jun 15, 2013</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 11, 2013 - Sep 15, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2013">
+<skos:prefLabel xml:lang="en">IAIR Spring 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 13.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">In-Residence Dates: Jan 22, 2013 - Mar 25, 2013</skos:scopeNote>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 21, 2013 - May 19, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2012">
+<skos:prefLabel xml:lang="en">IAIR Fall 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 12.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 15, 2012 - Jan 13, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2012">
+<skos:prefLabel xml:lang="en">IAIR Summer 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 12.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 12, 2012 - Sep 23, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2012">
+<skos:prefLabel xml:lang="en">IAIR Spring 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 12.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 21, 2012 - May 20, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2011">
+<skos:prefLabel xml:lang="en">IAIR Fall 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 11.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 17, 2011 - Jan 08, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2011">
+<skos:prefLabel xml:lang="en">IAIR Summer 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 11.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 14, 2011 - Sep 18, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2011">
+<skos:prefLabel xml:lang="en">IAIR Spring 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 11.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 24, 2011 - May 22, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2010">
+<skos:prefLabel xml:lang="en">IAIR Fall 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 10.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 18, 2010 - Jan 09, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2010">
+<skos:prefLabel xml:lang="en">IAIR Summer 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 10.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 15, 2010 - Sep 12, 2010</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2010">
+<skos:prefLabel xml:lang="en">IAIR Spring 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 10.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 18, 2010 - May 16, 2010</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2009">
+<skos:prefLabel xml:lang="en">IAIR Fall 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 09.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 19, 2009 - Jan 10, 2010</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2009">
+<skos:prefLabel xml:lang="en">IAIR Summer 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 09.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 16, 2009 - Sep 13, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2009">
+<skos:prefLabel xml:lang="en">IAIR Spring 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 09.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 19, 2009 - May 17, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2008">
+<skos:prefLabel xml:lang="en">IAIR Fall 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 08.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 06, 2008 - Jan 11, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2008">
+<skos:prefLabel xml:lang="en">IAIR Summer 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 08.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 10, 2008 - Sep 07, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2008">
+<skos:prefLabel xml:lang="en">IAIR Spring 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 08.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 13, 2008 - May 11, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2007">
+<skos:prefLabel xml:lang="en">IAIR Fall 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 07.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 08, 2007 - Jan 06, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2007">
+<skos:prefLabel xml:lang="en">IAIR Summer 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 07.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 12, 2007 - Sep 09, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2007">
+<skos:prefLabel xml:lang="en">IAIR Spring 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 07.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 08, 2007 - May 13, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2006">
+<skos:prefLabel xml:lang="en">IAIR Fall 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 06.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 16, 2006 - Jan 14, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2006">
+<skos:prefLabel xml:lang="en">IAIR Summer 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 06.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 06, 2006 - Sep 10, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2006">
+<skos:prefLabel xml:lang="en">IAIR Spring 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 06.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 08, 2006 - May 07, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2005">
+<skos:prefLabel xml:lang="en">IAIR Fall 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 05.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 10, 2005 - Jan 22, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2005">
+<skos:prefLabel xml:lang="en">IAIR Summer 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 05.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 07, 2005 - Sep 11, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2005">
+<skos:prefLabel xml:lang="en">IAIR Spring 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 05.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 23, 2005 - May 08, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2004">
+<skos:prefLabel xml:lang="en">IAIR Fall 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 04.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 11, 2004 - Jan 23, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2004">
+<skos:prefLabel xml:lang="en">IAIR Summer 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 04.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 08, 2004 - Sep 12, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2004">
+<skos:prefLabel xml:lang="en">IAIR Spring 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 04.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 18, 2004 - May 09, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2003">
+<skos:prefLabel xml:lang="en">IAIR Fall 2003</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 03.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 13, 2003 - Jan 25, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2003">
+<skos:prefLabel xml:lang="en">IAIR Summer 2003</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 03.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 10, 2003 - Sep 14, 2003</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2003">
+<skos:prefLabel xml:lang="en">IAIR Spring 2003</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 03.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 13, 2003 - May 11, 2003</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2002">
+<skos:prefLabel xml:lang="en">IAIR Fall 2002</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 02.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 08, 2002 - Jan 12, 2003</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2002">
+<skos:prefLabel xml:lang="en">IAIR Summer 2002</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 02.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 11, 2002 - Sep 08, 2002</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2002">
+<skos:prefLabel xml:lang="en">IAIR Spring 2002</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 02.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 14, 2002 - May 12, 2002</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2001">
+<skos:prefLabel xml:lang="en">IAIR Fall 2001</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 01.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 08, 2001 - Jan 13, 2002</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2001">
+<skos:prefLabel xml:lang="en">IAIR Summer 2001</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 01.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 16, 2001 - Sep 09, 2001</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2001">
+<skos:prefLabel xml:lang="en">IAIR Spring 2001</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 01.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 15, 2001 - May 13, 2001</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_winter_2000">
+<skos:prefLabel xml:lang="en">IAIR Winter 2000</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 00.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Dec 07, 2000 - Jan 14, 2001</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_2000">
+<skos:prefLabel xml:lang="en">IAIR Fall 2000</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 00.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 07, 2000 - Oct 15, 2000</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_2000">
+<skos:prefLabel xml:lang="en">IAIR Summer 2000</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 00.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 08, 2000 - Jul 16, 2000</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_2000">
+<skos:prefLabel xml:lang="en">IAIR Spring 2000</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 00.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 09, 2000 - Apr 16, 2000</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_winter_1999">
+<skos:prefLabel xml:lang="en">IAIR Winter 1999</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 99.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Dec 09, 1999 - Jan 16, 2000</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_1999">
+<skos:prefLabel xml:lang="en">IAIR Fall 1999</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 99.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 09, 1999 - Oct 17, 1999</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_1999">
+<skos:prefLabel xml:lang="en">IAIR Summer 1999</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 99.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 10, 1999 - Jul 18, 1999</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_1999">
+<skos:prefLabel xml:lang="en">IAIR Spring 1999</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 99.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 11, 1999 - Apr 18, 1999</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_winter_1998">
+<skos:prefLabel xml:lang="en">IAIR Winter 1998</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 98.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Dec 10, 1998 - Jan 17, 1999</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_1998">
+<skos:prefLabel xml:lang="en">IAIR Fall 1998</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 98.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 10, 1998 - Oct 11, 1998</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_1998">
+<skos:prefLabel xml:lang="en">IAIR Summer 1998</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 98.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 11, 1998 - Jul 12, 1998</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_1998">
+<skos:prefLabel xml:lang="en">IAIR Spring 1998</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 98.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 12, 1998 - Apr 12, 1998</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_winter_1997">
+<skos:prefLabel xml:lang="en">IAIR Winter 1997</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 97.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Dec 11, 1997 - Jan 11, 1998</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_1997">
+<skos:prefLabel xml:lang="en">IAIR Fall 1997</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 97.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 10, 1997 - Oct 19, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_1997">
+<skos:prefLabel xml:lang="en">IAIR Summer 1997</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 97.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 19, 1997 - Jul 20, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_1997">
+<skos:prefLabel xml:lang="en">IAIR Spring 1997</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 97.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 13, 1997 - Apr 20, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_winter_1996">
+<skos:prefLabel xml:lang="en">IAIR Winter 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 96.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Dec 05, 1996 - Jan 12, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_1996">
+<skos:prefLabel xml:lang="en">IAIR Fall 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 96.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 12, 1996 - Oct 06, 1996</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_1996">
+<skos:prefLabel xml:lang="en">IAIR Summer 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 96.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 06, 1996 - Jul 14, 1996</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_1996">
+<skos:prefLabel xml:lang="en">IAIR Spring 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 96.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Feb 29, 1996 - Apr 07, 1996</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_winter_1995">
+<skos:prefLabel xml:lang="en">IAIR Winter 1995</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 95.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 06, 1995 - Nov 10, 1995</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_fall_1995">
+<skos:prefLabel xml:lang="en">IAIR Fall 1995</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 95.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 06, 1995 - Aug 06, 1995</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_summer_1995">
+<skos:prefLabel xml:lang="en">IAIR Summer 1995</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 95.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 28, 1995 - Jun 04, 1995</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/iair/iair_spring_1995">
+<skos:prefLabel xml:lang="en">IAIR Spring 1995</skos:prefLabel>
+<skos:altLabel xml:lang="en">IAIR 95.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 15, 1995 - Feb 26, 1995</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/international-artist-in-residence"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://www.artpace.org/home/exhibits/hudsonshowroom">
+<skos:prefLabel xml:lang="en">Hudson Showroom</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR</skos:altLabel>
+<skos:altLabel xml:lang="en">Hudson</skos:altLabel>
+<skos:altLabel xml:lang="en">Hudson (Show)Room</skos:altLabel>
+<skos:altLabel xml:lang="en">Hudson Show Room</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2020"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr-spring-2018-2"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2014"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2014"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2014"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2003"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2003"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2003"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2003"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2002"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2002"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2002"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2002"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2001"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2001"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2001"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2001"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2000"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2000"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2000"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2000"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1999"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1999"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_1999"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_1998"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1998"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1998"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_1998"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_1997"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1997"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1997"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_1997"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_1_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_1996"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_1995"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1995"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1995"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2020">
+<skos:prefLabel xml:lang="en">HSR Spring 2020</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 20.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 09, 2020 - Aug 23, 2020</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2019">
+<skos:prefLabel xml:lang="en">HSR Fall 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 19.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 05, 2019 - Dec 29, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2019">
+<skos:prefLabel xml:lang="en">HSR Summer 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 19.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 16, 2019 - Aug 18, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2019">
+<skos:prefLabel xml:lang="en">HSR Spring 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 19.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 10, 2019 - Apr 28, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2018">
+<skos:prefLabel xml:lang="en">HSR Fall 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 18.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 06, 2018 - Dec 30, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2018">
+<skos:prefLabel xml:lang="en">HSR Summer 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 18.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 19, 2018 - Aug 12, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr-spring-2018-2">
+<skos:prefLabel xml:lang="en">HSR Spring 2 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 18.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Mar 22, 2018 - May 06, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2018">
+<skos:prefLabel xml:lang="en">HSR Spring 1 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 18.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 18, 2018 - Mar 04, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2017">
+<skos:prefLabel xml:lang="en">HSR Fall 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 17.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 21, 2017 - Dec 31, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2017">
+<skos:prefLabel xml:lang="en">HSR Summer 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 17.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 25, 2017 - Aug 27, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2017">
+<skos:prefLabel xml:lang="en">HSR Spring 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 17.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 26, 2017 - Apr 30, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2016">
+<skos:prefLabel xml:lang="en">HSR Fall 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 16.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 22, 2016 - Dec 31, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2016">
+<skos:prefLabel xml:lang="en">HSR Summer 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 16.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 12, 2016 - Aug 28, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2016">
+<skos:prefLabel xml:lang="en">HSR Spring 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 16.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 14, 2016 - Apr 24, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2015">
+<skos:prefLabel xml:lang="en">HSR Fall 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 15.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 10, 2015 - Jan 03, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2015">
+<skos:prefLabel xml:lang="en">HSR Summer 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 15.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 28, 2015 - Aug 30, 2015</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2015">
+<skos:prefLabel xml:lang="en">HSR Spring 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 15.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 15, 2015 - May 17, 2015</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2014">
+<skos:prefLabel xml:lang="en">HSR Fall 2014</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 14.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 11, 2014 - Dec 28, 2014</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2014">
+<skos:prefLabel xml:lang="en">HSR Summer 2014</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 14.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 08, 2014 - Aug 31, 2014</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2014">
+<skos:prefLabel xml:lang="en">HSR Spring 2014</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 14.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 16, 2014 - Apr 27, 2014</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2013">
+<skos:prefLabel xml:lang="en">HSR Fall 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 13.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 12, 2013 - Dec 29, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2013">
+<skos:prefLabel xml:lang="en">HSR Summer 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 13.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 02, 2013 - Sep 01, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2013">
+<skos:prefLabel xml:lang="en">HSR Spring 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 13.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 10, 2013 - Apr 21, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2012">
+<skos:prefLabel xml:lang="en">HSR Fall 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 12.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 20, 2012 - Dec 30, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2012">
+<skos:prefLabel xml:lang="en">HSR Summer 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 12.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 10, 2012 - Sep 09, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2012">
+<skos:prefLabel xml:lang="en">HSR Spring 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 12.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 12, 2012 - Apr 29, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2011">
+<skos:prefLabel xml:lang="en">HSR Fall 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 11.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 22, 2011 - Dec 31, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2011">
+<skos:prefLabel xml:lang="en">HSR Summer 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 11.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 12, 2011 - Sep 11, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2011">
+<skos:prefLabel xml:lang="en">HSR Spring 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 11.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 13, 2011 - May 01, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2010">
+<skos:prefLabel xml:lang="en">HSR Fall 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 10.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 23, 2010 - Jan 02, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2010">
+<skos:prefLabel xml:lang="en">HSR Summer 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 10.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 13, 2010 - Sep 05, 2010</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2010">
+<skos:prefLabel xml:lang="en">HSR Spring 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 10.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 14, 2010 - May 02, 2010</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2009">
+<skos:prefLabel xml:lang="en">HSR Fall 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 09.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 24, 2009 - Jan 03, 2010</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2009">
+<skos:prefLabel xml:lang="en">HSR Summer 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 09.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 14, 2009 - Sep 06, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2009">
+<skos:prefLabel xml:lang="en">HSR Spring 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 09.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 15, 2009 - May 03, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2008">
+<skos:prefLabel xml:lang="en">HSR Fall 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 08.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 11, 2008 - Jan 04, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2008">
+<skos:prefLabel xml:lang="en">HSR Summer 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 08.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 08, 2008 - Aug 17, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2008">
+<skos:prefLabel xml:lang="en">HSR Spring 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 08.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 31, 2008 - Apr 20, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2007">
+<skos:prefLabel xml:lang="en">HSR Winter 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 07.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 25, 2007 - Jan 20, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2007">
+<skos:prefLabel xml:lang="en">HSR Fall 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 07.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 26, 2007 - Oct 14, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2007">
+<skos:prefLabel xml:lang="en">HSR Summer 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 07.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 03, 2007 - Jul 15, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2007">
+<skos:prefLabel xml:lang="en">HSR Spring 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 07.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Feb 08, 2007 - Apr 22, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2006">
+<skos:prefLabel xml:lang="en">HSR Winter 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 06.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 26, 2006 - Jan 28, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2006">
+<skos:prefLabel xml:lang="en">HSR Fall 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 06.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 27, 2006 - Oct 15, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2006">
+<skos:prefLabel xml:lang="en">HSR Summer 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 06.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 04, 2006 - Jul 16, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2006">
+<skos:prefLabel xml:lang="en">HSR Spring 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 06.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 26, 2006 - Apr 23, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2005">
+<skos:prefLabel xml:lang="en">HSR Winter 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 05.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 26, 2005 - Jan 22, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2005">
+<skos:prefLabel xml:lang="en">HSR Fall 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 05.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 28, 2005 - Oct 16, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2005">
+<skos:prefLabel xml:lang="en">HSR Summer 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 05.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 28, 2005 - Jul 17, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2005">
+<skos:prefLabel xml:lang="en">HSR Spring 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 05.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 27, 2005 - Apr 17, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2004">
+<skos:prefLabel xml:lang="en">HSR Winter 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 04.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 28, 2004 - Jan 23, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2004">
+<skos:prefLabel xml:lang="en">HSR Fall 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 04.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 29, 2004 - Oct 17, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2004">
+<skos:prefLabel xml:lang="en">HSR Summer 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 04.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 29, 2004 - Jul 18, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2004">
+<skos:prefLabel xml:lang="en">HSR Spring 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 04.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Feb 05, 2004 - Apr 18, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2003">
+<skos:prefLabel xml:lang="en">HSR Winter 2003</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 03.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 30, 2003 - Jan 25, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2003">
+<skos:prefLabel xml:lang="en">HSR Fall 2003</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 03.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 24, 2003 - Oct 19, 2003</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2003">
+<skos:prefLabel xml:lang="en">HSR Summer 2003</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 03.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 15, 2003 - Jul 13, 2003</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2003">
+<skos:prefLabel xml:lang="en">HSR Spring 2003</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 03.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 09, 2003 - Apr 06, 2003</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2002">
+<skos:prefLabel xml:lang="en">HSR Winter 2002</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 02.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 17, 2002 - Dec 29, 2002</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2002">
+<skos:prefLabel xml:lang="en">HSR Fall 2002</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 02.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 25, 2002 - Oct 06, 2002</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2002">
+<skos:prefLabel xml:lang="en">HSR Summer 2002</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 02.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 18, 2002 - Jul 14, 2002</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2002">
+<skos:prefLabel xml:lang="en">HSR Spring 2002</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 02.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 22, 2002 - Apr 07, 2002</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2001">
+<skos:prefLabel xml:lang="en">HSR Winter 2001</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 01.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 06, 2001 - Nov 25, 2001</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2001">
+<skos:prefLabel xml:lang="en">HSR Fall 2001</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 01.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 28, 2001 - Aug 26, 2001</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2001">
+<skos:prefLabel xml:lang="en">HSR Summer 2001</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 01.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 05, 2001 - Jun 17, 2001</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2001">
+<skos:prefLabel xml:lang="en">HSR Spring 2001</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 01.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 11, 2001 - Mar 25, 2001</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2000">
+<skos:prefLabel xml:lang="en">HSR Winter 2000</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 00.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 05, 2000 - Dec 31, 2000</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_2000">
+<skos:prefLabel xml:lang="en">HSR Fall 2000</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 00.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 06, 2000 - Oct 01, 2000</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2000">
+<skos:prefLabel xml:lang="en">HSR Summer 2000</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 00.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 06, 2000 - Jul 02, 2000</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_2000">
+<skos:prefLabel xml:lang="en">HSR Spring 2000</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 00.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 14, 2000 - Apr 02, 2000</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1999">
+<skos:prefLabel xml:lang="en">HSR Fall 1999</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 99.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 15, 1999 - Oct 03, 1999</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1999">
+<skos:prefLabel xml:lang="en">HSR Summer 1999</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 99.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 08, 1999 - Jul 04, 1999</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_1999">
+<skos:prefLabel xml:lang="en">HSR Spring 1999</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 99.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 14, 1999 - Apr 04, 1999</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_1998">
+<skos:prefLabel xml:lang="en">HSR Winter 1998</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 98.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 23, 1998 - Dec 13, 1998</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1998">
+<skos:prefLabel xml:lang="en">HSR Fall 1998</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 98.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 09, 1998 - Sep 13, 1998</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1998">
+<skos:prefLabel xml:lang="en">HSR Summer 1998</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 98.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 09, 1998 - Jul 05, 1998</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_1998">
+<skos:prefLabel xml:lang="en">HSR Spring 1998</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 98.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 15, 1998 - Mar 15, 1998</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_1997">
+<skos:prefLabel xml:lang="en">HSR Winter 1997</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 97.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Oct 16, 1997 - Dec 14, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1997">
+<skos:prefLabel xml:lang="en">HSR Fall 1997</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 97.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 10, 1997 - Oct 12, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1997">
+<skos:prefLabel xml:lang="en">HSR Summer 1997</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 97.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 18, 1997 - Jul 06, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_1997">
+<skos:prefLabel xml:lang="en">HSR Spring 1997</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 97.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Feb 06, 1997 - Apr 06, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_2_1996">
+<skos:prefLabel xml:lang="en">HSR Winter 2 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 96.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 08, 1996 - Jan 05, 1997</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_1_1996">
+<skos:prefLabel xml:lang="en">HSR Winter 1 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 96.4</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 13, 1996 - Oct 27, 1996</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1996">
+<skos:prefLabel xml:lang="en">HSR Fall 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 96.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 28, 1996 - Sep 01, 1996</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_2_1996">
+<skos:prefLabel xml:lang="en">HSR Summer 2 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 96.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 16, 1996 - Jun 23, 1996</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1_1996">
+<skos:prefLabel xml:lang="en">HSR Summer 1 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 96.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Apr 06, 1996 - May 12, 1996</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_spring_1996">
+<skos:prefLabel xml:lang="en">HSR Spring 1996</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 96.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Feb 10, 1996 - Mar 31, 1996</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_winter_1995">
+<skos:prefLabel xml:lang="en">HSR Winter 1995</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 95.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Nov 18, 1995 - Dec 22, 1995</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_fall_1995">
+<skos:prefLabel xml:lang="en">HSR Fall 1995</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 95.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 07, 1995 - Oct 08, 1995</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/hudson_showroom/hsr_summer_1995">
+<skos:prefLabel xml:lang="en">HSR Summer 1995</skos:prefLabel>
+<skos:altLabel xml:lang="en">HSR 95.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 10, 1995 - Jul 09, 1995</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/hudsonshowroom"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://www.artpace.org/home/exhibits/window-works">
+<skos:prefLabel xml:lang="en">Main Space</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS</skos:altLabel>
+<skos:altLabel xml:lang="en">WW</skos:altLabel>
+<skos:altLabel xml:lang="en">Window Works</skos:altLabel>
+<skos:altLabel xml:lang="en">Main</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ms_spring_2020"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ms_fall_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ms_summer_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ms_spring_2019"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ms_fall_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ms_summer_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2018"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2017"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2016"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2015"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2014"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2014"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2013"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2012"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2011"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2010"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2009"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2008"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2007"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2006"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2005"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_fall_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_spring_2004"/>
+<skos:narrower rdf:resource="https://artpace.org/exhibitions/window_works/ww_summer_2002"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ms_spring_2020">
+<skos:prefLabel xml:lang="en">MS Spring 2020</skos:prefLabel>
+<skos:altLabel xml:lang="en">WW Spring 2020</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 20.1</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 20.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 09, 2020 - Apr 26, 2020</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ms_fall_2019">
+<skos:prefLabel xml:lang="en">MS Fall 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">WW Fall 2019</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 19.3</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 19.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 05, 2019 - Dec 29, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ms_summer_2019">
+<skos:prefLabel xml:lang="en">MS Summer 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">WW Summer 2019</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 19.2</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 19.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 16, 2019 - Aug 18, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ms_spring_2019">
+<skos:prefLabel xml:lang="en">MS Spring 2019</skos:prefLabel>
+<skos:altLabel xml:lang="en">WW Spring 2019</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 19.1</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 19.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 10, 2019 - Apr 28, 2019</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ms_fall_2018">
+<skos:prefLabel xml:lang="en">MS Fall 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">WW Fall 2018</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 18.3</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 18.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 06, 2018 - Dec 30, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ms_summer_2018">
+<skos:prefLabel xml:lang="en">MS Summer 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">WW Summer 2018</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 18.2</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 18.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 19, 2018 - Aug 12, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2018">
+<skos:prefLabel xml:lang="en">MS Spring 2018</skos:prefLabel>
+<skos:altLabel xml:lang="en">WW Spring 2018</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 18.1</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 18.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 18, 2018 - May 06, 2018</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2017">
+<skos:prefLabel xml:lang="en">MS Fall 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">WW Fall 2017</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 17.3</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 17.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 21, 2017 - Dec 31, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2017">
+<skos:prefLabel xml:lang="en">WW Summer 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2017</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 17.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 17.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 25, 2017 - Aug 27, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2017">
+<skos:prefLabel xml:lang="en">WW Spring 2017</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2017</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 17.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 17.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 26, 2017 - Apr 30, 2017</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2016">
+<skos:prefLabel xml:lang="en">WW Fall 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2016</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 16.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 16.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 22, 2016 - Dec 31, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2016">
+<skos:prefLabel xml:lang="en">WW Summer 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2016</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 16.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 16.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 09, 2016 - Aug 28, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2016">
+<skos:prefLabel xml:lang="en">WW Spring 2016</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2016</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 16.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 16.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 14, 2016 - Apr 24, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2015">
+<skos:prefLabel xml:lang="en">WW Fall 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2015</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 15.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 15.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 10, 2015 - Jan 03, 2016</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2015">
+<skos:prefLabel xml:lang="en">WW Summer 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2015</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 15.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 15.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 28, 2015 - Aug 30, 2015</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2015">
+<skos:prefLabel xml:lang="en">WW Spring 2015</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2015</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 15.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 15.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 15, 2015 - May 17, 2015</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2014">
+<skos:prefLabel xml:lang="en">WW Fall 2014</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2014</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 14.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 14.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 11, 2014 - Dec 28, 2014</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2014">
+<skos:prefLabel xml:lang="en">WW Summer 2014</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2014</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 14.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 14.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 08, 2014 - Aug 31, 2014</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2013">
+<skos:prefLabel xml:lang="en">WW Fall 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2013</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 13.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 13.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 12, 2013 - Dec 09, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2013">
+<skos:prefLabel xml:lang="en">WW Summer 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2013</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 13.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 13.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 02, 2013 - Sep 01, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2013">
+<skos:prefLabel xml:lang="en">WW Spring 2013</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2013</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 13.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 13.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 10, 2013 - Apr 21, 2013</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2012">
+<skos:prefLabel xml:lang="en">WW Fall 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2012</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 12.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 12.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 20, 2012 - Dec 30, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2012">
+<skos:prefLabel xml:lang="en">WW Summer 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2012</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 12.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 12.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 10, 2012 - Sep 09, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2012">
+<skos:prefLabel xml:lang="en">WW Spring 2012</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2012</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 12.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 12.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 12, 2012 - Apr 29, 2012</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2011">
+<skos:prefLabel xml:lang="en">WW Fall 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2011</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 11.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 11.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 22, 2011 - Dec 31, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2011">
+<skos:prefLabel xml:lang="en">WW Summer 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2011</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 11.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 11.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 12, 2011 - Sep 11, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2011">
+<skos:prefLabel xml:lang="en">WW Spring 2011</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2011</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 11.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 11.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 13, 2011 - May 01, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2010">
+<skos:prefLabel xml:lang="en">WW Fall 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2010</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 10.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 10.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 23, 2010 - Jan 02, 2011</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2010">
+<skos:prefLabel xml:lang="en">WW Summer 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2010</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 10.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 10.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 13, 2010 - Sep 19, 2010</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2010">
+<skos:prefLabel xml:lang="en">WW Spring 2010</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2010</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 10.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 10.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 14, 2010 - May 09, 2010</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2009">
+<skos:prefLabel xml:lang="en">WW Fall 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2009</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 09.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 09.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 24, 2009 - Nov 29, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2009">
+<skos:prefLabel xml:lang="en">WW Summer 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2009</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 09.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 09.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 14, 2009 - Sep 20, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2009">
+<skos:prefLabel xml:lang="en">WW Spring 2009</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2009</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 09.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 09.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 15, 2009 - May 10, 2009</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2008">
+<skos:prefLabel xml:lang="en">WW Fall 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2008</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 08.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 08.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 18, 2008 - Nov 30, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2008">
+<skos:prefLabel xml:lang="en">WW Summer 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2008</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 08.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 08.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 12, 2008 - Sep 14, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2008">
+<skos:prefLabel xml:lang="en">WW Spring 2008</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2008</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 08.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 08.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Feb 07, 2008 - Jun 08, 2008</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2007">
+<skos:prefLabel xml:lang="en">WW Fall 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2007</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 07.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 07.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 20, 2007 - Nov 25, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2007">
+<skos:prefLabel xml:lang="en">WW Summer 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2007</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 07.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 07.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 21, 2007 - Sep 23, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2007">
+<skos:prefLabel xml:lang="en">WW Spring 2007</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2007</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 07.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 07.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Feb 08, 2007 - Apr 29, 2007</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2006">
+<skos:prefLabel xml:lang="en">WW Fall 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2006</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 06.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 06.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Sep 21, 2006 - Nov 26, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2006">
+<skos:prefLabel xml:lang="en">WW Summer 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2006</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 06.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 06.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 15, 2006 - Sep 10, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2006">
+<skos:prefLabel xml:lang="en">WW Spring 2006</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2006</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 06.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 06.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Feb 02, 2006 - Apr 23, 2006</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2005">
+<skos:prefLabel xml:lang="en">WW Fall 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2005</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 05.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 05.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 21, 2005 - Oct 09, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2005">
+<skos:prefLabel xml:lang="en">WW Spring 2005</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2005</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 05.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 05.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jan 27, 2005 - Apr 17, 2005</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_fall_2004">
+<skos:prefLabel xml:lang="en">WW Fall 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Fall 2004</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 04.3</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 04.3</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 29, 2004 - Nov 14, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2004">
+<skos:prefLabel xml:lang="en">WW Summer 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2004</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 04.2</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 04.2</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jun 17, 2004 - Jul 25, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_spring_2004">
+<skos:prefLabel xml:lang="en">WW Spring 2004</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Spring 2004</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 04.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 04.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: May 13, 2004 - Jun 15, 2004</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+<skos:Concept rdf:about="https://artpace.org/exhibitions/window_works/ww_summer_2002">
+<skos:prefLabel xml:lang="en">WW Summer 2002</skos:prefLabel>
+<skos:altLabel xml:lang="en">MS Summer 2002</skos:altLabel>
+<skos:altLabel xml:lang="en">WW 02.1</skos:altLabel>
+<skos:altLabel xml:lang="en">MS 02.1</skos:altLabel>
+<skos:inScheme rdf:resource="http://10.0.0.174/index.php/subjects"/>
+<skos:scopeNote xml:lang="en">Exhibition Dates: Jul 11, 2002 - Sep 15, 2002</skos:scopeNote>
+<skos:broader rdf:resource="https://www.artpace.org/home/exhibits/window-works"/>
+</skos:Concept>
+</rdf:RDF>

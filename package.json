@@ -5,7 +5,9 @@
   "author": "Chris Mills",
   "license": "ISC",
   "private": true,
-  "os" : [ "darwin" ],
+  "os": [
+    "darwin"
+  ],
   "engines": {
     "node": "^14.4.0"
   },
@@ -26,6 +28,7 @@
     "junk": "^3.1.0",
     "shelljs": "^0.8.4",
     "winston": "^3.2.1",
+    "xml2js": "^0.4.23",
     "yargs": "^15.3.1"
   },
   "devDependencies": {

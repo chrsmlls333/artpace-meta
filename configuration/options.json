@@ -11,7 +11,8 @@
   
   "resources": {
     "logsDirectory": "./logs/",
-    "artistsAtomTemplateCSV": "./resources/NewAtomAuthorityRecords_07.02.20_CMills&CHunger_FINAL.csv"
+    "artistsAtomTemplateCSV": "./resources/NewAtomAuthorityRecords_07.02.20_CMills&CHunger_FINAL.csv",
+    "subjectsCyclesXML": "./resources/AtomSubjectsImport(IAIR-HSR-MSWW)_2020.06.04.xml.skos"
   },
 
   "apmetaFormat": {
