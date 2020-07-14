@@ -649,12 +649,38 @@ function isadContainerAddTransform(isadEntries, dirname) {
     physicalObjectType: '',
     alternativeIdentifiers: '',
     alternativeIdentifierLabels: '',
+    eventDates: (() => {
+      const allDates = isadEntries.map(e => e.eventDates.split('|')).flat();
+      return utils.allEqual(allDates) || 'NULL';
+    })(),
+    eventTypes: 'Creation',
+    eventStartDates: (() => {
+      const allDates = isadEntries.map(e => e.eventDates.split('|')).flat();
+      if (utils.allEqual(allDates)) return 'NULL';
+      allDates.sort((a, b) => new Date(a) - new Date(b));
+      console.log(allDates[0]);
+      return allDates[0];
+    })(),
+    eventEndDates: (() => {
+      const allDates = isadEntries.map(e => e.eventDates.split('|')).flat();
+      if (utils.allEqual(allDates)) return 'NULL';
+      allDates.sort((a, b) => new Date(a) - new Date(b));
+      console.log(allDates[allDates.length - 1]);
+      return allDates[allDates.length - 1];
+    })(),
+    eventActors: (() => {
+      const allDates = isadEntries.map(e => e.eventActors.split('|')).flat();
+      return [...new Set(allDates)] || '';
+    })(),
     // eventActorHistories: v.dates.map(d => d.eventActorHistories || 'NULL').join('|'),
     culture: 'en',
   };
 
-  // Inherit homogenous data and delete
-  Object.keys(isadEntries[0]).forEach(k => {
+  // Inherit homogenous data and delete, except for event___ data
+  Object.keys(isadParentEntry).forEach(k => {
+    if (
+      k.startsWith('event')
+    ) return;
     const match = utils.allEqual(isadEntries.map(v => v[k]));
     if (match && (match === isadParentEntry[k] || isadParentEntry[k] === '')) {
       isadParentEntry[k] = match;
