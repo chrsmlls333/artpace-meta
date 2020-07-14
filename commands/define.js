@@ -20,6 +20,7 @@ const csv = require('fast-csv');
 
 const utils = require('../utils/utils');
 utils.loadArtists = require('../utils/loadArtists');
+utils.loadCycleSubjects = require('../utils/loadCycleSubjects');
 String.prototype.breakCamelCase = utils.breakCamelCase; // eslint-disable-line no-extend-native
 
 // const ISADEntryTemplate = require('../resources/ISADEntryTemplate-2.6');
@@ -161,6 +162,10 @@ async function define(argv) {
   const artistList = await utils.loadArtists();
   artistList.forEach(a => { artistsFuzzySet.add(a.authorizedFormOfName); });
   files = files.map(f => findArtistMentions(f, artistList, artistsFuzzySet));
+
+  utils.stepNotify(`Looking for Exhibition Cycles`);
+  const cycleList = await utils.loadCycleSubjects();
+  files = files.map(f => findCycleReferences(f, artistList, cycleList));
 
   // Folder Path Tokens
   files = files.map(f => tagPathTokens(f, source));
@@ -429,7 +434,6 @@ function detectCreditsInPathAndTags(fileObject) {
  */
 function findArtistMentions(fileObject, artists, fuzzy) {
   let names = fileObject.names || [];
-  const subjects = fileObject.subjects || [];
 
   // Get Artists
   fileObject.path
@@ -446,13 +450,59 @@ function findArtistMentions(fileObject, artists, fuzzy) {
   // Dedupe names 
   names = [...new Set(names)];
 
-  // Get Corresponding Subjects
+  return { ...fileObject, names };
+}
+
+/**
+ * Match Artist mentions and corresponding Subjects Access Points
+ * @requires utils/loadCycleSubjects
+ * @param    {FileObject} fileObject 
+ * @param    {Object[]}   artists     List of Artist Names matched with Exhibition Cycles
+ * @param    {Object[]}   cycles      PrefLabels and altLabels from SKOS XML
+ * @returns  {FileObject} 
+ */
+function findCycleReferences(fileObject, artists, cycles) {
+  const names = fileObject.names || [];
+  let subjects = fileObject.subjects || [];
+
+  // Get Corresponding Subjects to already found Artists
   names.forEach(n => {
     const match = artists.find(a => a.authorizedFormOfName === n);
     subjects.push(...match.subjectAccessPoints);
   });
 
-  return { ...fileObject, names, subjects };
+  // Get Corresponding Subjects to path
+  const dirPath = path.dirname(fileObject.path);
+  const dirPathTokens = dirPath
+    .split(/[/\\_-]/)
+    .filter(t => !!t)
+    .filter(t => t !== 'Volumes')
+    .filter(t => t !== 'Archive')
+    .map(s => s.trim());
+  
+  const pathMatch = (() => {
+    const abbrevs = ['IAIR', 'HSR', 'WW', 'MS'];
+    const programMatch = dirPathTokens.find(e => abbrevs.includes(e));
+    if (!programMatch) return '';
+    const i = dirPathTokens.indexOf(programMatch);
+    const yearSeasonMatch = dirPathTokens.slice(i).find(t => t.match(/^\d\d\.\d$/));
+    if (!yearSeasonMatch) return '';
+    const shortcode = `${programMatch} ${yearSeasonMatch}`;
+    const cyclematch = cycles.find(e => e.altLabel.includes(shortcode));
+    if (!cyclematch || !cyclematch.prefLabel || !cyclematch.prefLabel.length) return '';
+    return cyclematch.prefLabel[0];
+  })() || '';
+  if (pathMatch !== '') {
+    // Remove other artist matches
+    if (subjects.some(s => s.toLowerCase() === pathMatch.toLowerCase())) subjects = [pathMatch];
+    // Add to list for manual inspection
+    else subjects.push(pathMatch);
+  }
+
+  // Dedupe subjects
+  subjects = [...new Set(subjects)];
+
+  return { ...fileObject, subjects };
 }
 
 /**
