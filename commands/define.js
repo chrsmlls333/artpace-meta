@@ -579,9 +579,9 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
     digitalObjectURI: '',
     digitalObjectChecksum: f.checksum || '',
     generalNote: f.mediainforeport || '',
-    subjectAccessPoints: f.subjects.join('|') || '',
+    subjectAccessPoints: utils.arrayToPipeStr(f.subjects),
     placeAccessPoints: '',
-    nameAccessPoints: f.names.join('|') || '',
+    nameAccessPoints: utils.arrayToPipeStr(f.names),
     genreAccessPoints: '',
     // descriptionIdentifier: '',
     // institutionIdentifier: '',
@@ -599,11 +599,11 @@ function isadFileFormatter(fileObject, i, fileObjectArray) {
     physicalObjectType: '',
     alternativeIdentifiers: '',
     alternativeIdentifierLabels: '',
-    eventDates: f.dates.map(d => d.eventDates || 'NULL').join('|'),
-    eventTypes: f.dates.map(d => d.eventTypes || 'NULL').join('|'),
-    eventStartDates: f.dates.map(d => d.eventStartDates || 'NULL').join('|'),
-    eventEndDates: f.dates.map(d => d.eventEndDates || 'NULL').join('|'),
-    eventActors: f.dates.map(d => d.eventActors || 'NULL').join('|'),
+    eventDates: utils.arrayToPipeStr(f.dates.map(d => d.eventDates || 'NULL')),
+    eventTypes: utils.arrayToPipeStr(f.dates.map(d => d.eventTypes || 'NULL')),
+    eventStartDates: utils.arrayToPipeStr(f.dates.map(d => d.eventStartDates || 'NULL')),
+    eventEndDates: utils.arrayToPipeStr(f.dates.map(d => d.eventEndDates || 'NULL')),
+    eventActors: utils.arrayToPipeStr(f.dates.map(d => d.eventActors || 'NULL')),
     // eventActorHistories: v.dates.map(d => d.eventActorHistories || 'NULL').join('|'),
     culture: 'en',
   };
@@ -621,16 +621,8 @@ function isadAddFolderID(isadEntries, folderId) {
   if (!isadEntries.length) return isadEntries;
   return isadEntries.map(v => ({
     ...v,
-    alternativeIdentifiers: (() => {
-      const f = v.alternativeIdentifiers.split('|').filter(h => h !== '');
-      f.push(folderId);
-      return f.join('|');
-    })(),
-    alternativeIdentifierLabels: (() => {
-      const f = v.alternativeIdentifierLabels.split('|').filter(h => h !== '');
-      f.push('apmeta ID');
-      return f.join('|');
-    })(),
+    alternativeIdentifiers: utils.pushToPipeStr(v.alternativeIdentifiers, folderId),
+    alternativeIdentifierLabels: utils.pushToPipeStr(v.alternativeIdentifierLabels, 'apmeta ID'),
   }));
 }
 
@@ -679,10 +671,18 @@ function isadContainerAddTransform(isadEntries, dirname) {
     digitalObjectURI: '',
     digitalObjectChecksum: '',
     generalNote: '',
-    subjectAccessPoints: [...new Set(isadEntries.map(v => v.subjectAccessPoints))].join('|') || '',
-    placeAccessPoints: [...new Set(isadEntries.map(v => v.placeAccessPoints))].join('|') || '',
-    nameAccessPoints: [...new Set(isadEntries.map(v => v.nameAccessPoints))].join('|') || '',
-    genreAccessPoints: [...new Set(isadEntries.map(v => v.genreAccessPoints))].join('|') || '',
+    subjectAccessPoints: isadEntries
+      .map(v => v.subjectAccessPoints)
+      .reduce(utils.combinePipeStrs, ''),
+    placeAccessPoints: isadEntries
+      .map(v => v.placeAccessPoints)
+      .reduce(utils.combinePipeStrs, ''),
+    nameAccessPoints: isadEntries
+      .map(v => v.nameAccessPoints)
+      .reduce(utils.combinePipeStrs, ''),
+    genreAccessPoints: isadEntries
+      .map(v => v.genreAccessPoints)
+      .reduce(utils.combinePipeStrs, ''),
     // descriptionIdentifier: '',
     // institutionIdentifier: '',
     // rules: '',
