@@ -656,15 +656,15 @@ function isadContainerAddTransform(isadEntries, dirname) {
     // appraisal: '',
     // accruals: '',
     // arrangement: '',
-    accessConditions: utils.allEqual(isadEntries.map(v => v.accessConditions)),
-    reproductionConditions: utils.allEqual(isadEntries.map(v => v.reproductionConditions)),
+    accessConditions: '',
+    reproductionConditions: '',
     // language: 'en',
     // script: '',
     // languageNote: '',
     physicalCharacteristics: '',
     // findingAids: '',
-    locationOfOriginals: utils.allEqual(isadEntries.map(v => v.locationOfOriginals)),
-    locationOfCopies: utils.allEqual(isadEntries.map(v => v.locationOfCopies)),
+    locationOfOriginals: '',
+    locationOfCopies: '',
     // relatedUnitsOfDescription: '',
     // publicationNote: '',
     digitalObjectPath: '',
@@ -708,14 +708,12 @@ function isadContainerAddTransform(isadEntries, dirname) {
       const allDates = isadEntries.map(e => e.eventDates.split('|')).flat();
       if (utils.allEqual(allDates)) return 'NULL';
       allDates.sort((a, b) => new Date(a) - new Date(b));
-      console.log(allDates[0]);
       return allDates[0];
     })(),
     eventEndDates: (() => {
       const allDates = isadEntries.map(e => e.eventDates.split('|')).flat();
       if (utils.allEqual(allDates)) return 'NULL';
       allDates.sort((a, b) => new Date(a) - new Date(b));
-      console.log(allDates[allDates.length - 1]);
       return allDates[allDates.length - 1];
     })(),
     eventActors: (() => {
@@ -729,7 +727,11 @@ function isadContainerAddTransform(isadEntries, dirname) {
   // Inherit homogenous data and delete, except for event___ data
   Object.keys(isadParentEntry).forEach(k => {
     if (
-      k.startsWith('event')
+      k.endsWith('Id') ||
+      k === 'identifier' ||
+      k === 'qubitParentSlug' ||
+      k.startsWith('event') ||
+      k.startsWith('digitalObject')
     ) return;
     const match = utils.allEqual(isadEntries.map(v => v[k]));
     if (match && (match === isadParentEntry[k] || isadParentEntry[k] === '')) {
