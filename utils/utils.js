@@ -286,6 +286,70 @@ const utils = {
       });
   },
 
+  /**
+   * Compile Array to Bar String for AtoM CSV
+   * @param   {String[]}  arr
+   * @returns {String}    
+   */
+  arrayToPipeStr(arr) {
+    if (!Array.isArray(arr)) return '';
+    return arr
+      .filter(e => e !== '')
+      .join('|');
+  },
+
+  /**
+   * Compile Bar String from Array
+   * @param   {String}    str 
+   * @returns {String[]}
+   */
+  pipeStrToArray(str) {
+    if (!(typeof str === 'string' || str instanceof String)) return [];
+    return str
+      .trim()
+      .split('|')
+      .filter(e => e !== '');
+  },
+
+  /**
+   * Add Element to Bar String
+   * @param  {String} str 
+   * @param  {...any} vals 
+   * @return {String}
+   */
+  pushToPipeStr(str, ...vals) {
+    const a = utils.pipeStrToArray(str);
+    a.push(...vals);
+    return utils.arrayToPipeStr(a);
+  },
+
+  /**
+   * Run union operation on Bar String
+   * @param  {String} _s1 
+   * @param  {String} _s2 
+   * @return {String}
+   */
+  combinePipeStrs(_s1, _s2) {
+    const s1 = (typeof _s1 === 'string' || _s1 instanceof String) ? _s1 : _s1.toString();
+    const s2 = (typeof _s2 === 'string' || _s2 instanceof String) ? _s2 : _s2.toString();
+    const a1 = utils.pipeStrToArray(s1);
+    const a2 = utils.pipeStrToArray(s2);
+    const u = utils.unionArrays(a1, a2);
+    return utils.arrayToPipeStr(u);
+  },
+
+  /**
+   * Array Union via Sets contructor
+   * @param   {Array} _a1 
+   * @param   {Array} _a2 
+   * @returns {Array}
+   */
+  unionArrays(_a1, _a2) {
+    const a1 = (Array.isArray(_a1)) ? _a1 : [_a1];
+    const a2 = (Array.isArray(_a2)) ? _a2 : [_a2];
+    return [...new Set([...a1, ...a2])];
+  },
+
 };
 
 module.exports = utils;
