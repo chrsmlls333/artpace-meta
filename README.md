@@ -1,4 +1,4 @@
-# Artpace Metadata Creator
+# Artpace (San Antonio) Archives and Resource Library Metadata Creator
 
 ### Installation
 - Install Homebrew https://brew.sh/
